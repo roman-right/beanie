@@ -1,0 +1,723 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
+    
+    
+      
+        <title>Migrations - Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.33e2939f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#attention" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Migrations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Quick Start
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Quick Start" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Quick Start
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../odm/" class="md-nav__link">
+        ODM
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Migrations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Migrations
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attention" class="md-nav__link">
+    Attention!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create" class="md-nav__link">
+    Create
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run" class="md-nav__link">
+    Run
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migration-types" class="md-nav__link">
+    Migration types
+  </a>
+  
+    <nav class="md-nav" aria-label="Migration types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iterative-migrations" class="md-nav__link">
+    Iterative migrations
+  </a>
+  
+    <nav class="md-nav" aria-label="Iterative migrations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-simple-example-of-field-name-changing" class="md-nav__link">
+    A simple example of field name changing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#free-fall-migrations" class="md-nav__link">
+    Free fall migrations
+  </a>
+  
+    <nav class="md-nav" aria-label="Free fall migrations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-same-example-as-for-the-iterative-migration-but-with-free-fall-migration-type" class="md-nav__link">
+    The same example as for the iterative migration, but with free fall migration type
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#attention" class="md-nav__link">
+    Attention!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create" class="md-nav__link">
+    Create
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run" class="md-nav__link">
+    Run
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migration-types" class="md-nav__link">
+    Migration types
+  </a>
+  
+    <nav class="md-nav" aria-label="Migration types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iterative-migrations" class="md-nav__link">
+    Iterative migrations
+  </a>
+  
+    <nav class="md-nav" aria-label="Iterative migrations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-simple-example-of-field-name-changing" class="md-nav__link">
+    A simple example of field name changing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#free-fall-migrations" class="md-nav__link">
+    Free fall migrations
+  </a>
+  
+    <nav class="md-nav" aria-label="Free fall migrations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-same-example-as-for-the-iterative-migration-but-with-free-fall-migration-type" class="md-nav__link">
+    The same example as for the iterative migration, but with free fall migration type
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Migrations</h1>
+                
+                <h2 id="attention">Attention!</h2>
+<p>Migrations use transactions inside. It works only with <strong>MongoDB replica sets</strong></p>
+<h2 id="create">Create</h2>
+<p>To create new migration run:</p>
+<div class="highlight"><pre><span></span><code>beanie new-migration -n migration_name -p relative/path/to/migrations/directory/
+</code></pre></div>
+<p>It will create a file with name <code>*_migration_name.py</code> in the directory <code>relative/path/to/migrations/directory/</code></p>
+<p>Migration file contains two classes: <code>Forward</code> and <code>Backward</code>. Each one contains instructions to roll migration respectively forward and backward.</p>
+<h2 id="run">Run</h2>
+<p>To roll one migration forward run:</p>
+<div class="highlight"><pre><span></span><code>beanie migrate -uri <span class="s1">&#39;mongodb+srv://user:pass@host/db&#39;</span> -p relative/path/to/migrations/directory/ --distance <span class="m">1</span>
+</code></pre></div>
+<p>To roll all the migrations forward run:</p>
+<div class="highlight"><pre><span></span><code>beanie migrate -uri <span class="s1">&#39;mongodb+srv://user:pass@host/db&#39;</span> -p relative/path/to/migrations/directory/
+</code></pre></div>
+<p>To roll one migration backward run:</p>
+<div class="highlight"><pre><span></span><code>beanie migrate -uri <span class="s1">&#39;mongodb+srv://user:pass@host/db&#39;</span> -p relative/path/to/migrations/directory/ --distance <span class="m">1</span> --backward
+</code></pre></div>
+<p>To roll all the migrations backward run:</p>
+<div class="highlight"><pre><span></span><code>beanie migrate -uri <span class="s1">&#39;mongodb+srv://user:pass@host/db&#39;</span> -p relative/path/to/migrations/directory/ --backward
+</code></pre></div>
+<p>To show help message with all the parameters and descriptions run</p>
+<div class="highlight"><pre><span></span><code>beanie migrate --help
+</code></pre></div>
+<h2 id="migration-types">Migration types</h2>
+<p>Migration class contains instructions - decorated async functions. There are two types of instructions:</p>
+<ul>
+<li>Iterative migration - instruction, which iterates over all the documents of the input_document collection and updates it. Most comfortable to use. Can be used in 99% cases.</li>
+<li>Free fall migrations - instruction, where user can write any logic. Most flexible, but verbose.</li>
+</ul>
+<h3 id="iterative-migrations">Iterative migrations</h3>
+<p>To mark a function as iterative migration must be used decorator <code>@iterative_migration()</code>. The function itself as parameters must have <code>input_document</code> with type and <code>output_document</code> with type. Like here:</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@iterative_migration</span><span class="p">()</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">name_to_title</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">input_document</span><span class="p">:</span> <span class="n">OldNote</span><span class="p">,</span> <span class="n">output_document</span><span class="p">:</span> <span class="n">Note</span>
+<span class="p">):</span>
+</code></pre></div>
+<h4 id="a-simple-example-of-field-name-changing">A simple example of field name changing</h4>
+<p>There are the next models:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Tag</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">color</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+
+
+<span class="k">class</span> <span class="nc">OldNote</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">tag</span><span class="p">:</span> <span class="n">Tag</span>
+
+    <span class="k">class</span> <span class="nc">Collection</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;notes&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Note</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">tag</span><span class="p">:</span> <span class="n">Tag</span>
+
+    <span class="k">class</span> <span class="nc">Collection</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;notes&quot;</span>
+</code></pre></div>
+<p>To migrate from <code>OldNote</code> to <code>Note</code> filed <code>name</code> has to be renamed to <code>title</code>.</p>
+<p>Forward migration:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Forward</span><span class="p">:</span>
+    <span class="nd">@iterative_migration</span><span class="p">()</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">name_to_title</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">input_document</span><span class="p">:</span> <span class="n">OldNote</span><span class="p">,</span> <span class="n">output_document</span><span class="p">:</span> <span class="n">Note</span>
+    <span class="p">):</span>
+        <span class="n">output_document</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">input_document</span><span class="o">.</span><span class="n">name</span>
+</code></pre></div>
+<p>Backward migration:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Backward</span><span class="p">:</span>
+    <span class="nd">@iterative_migration</span><span class="p">()</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">title_to_name</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">input_document</span><span class="p">:</span> <span class="n">Note</span><span class="p">,</span> <span class="n">output_document</span><span class="p">:</span> <span class="n">OldNote</span>
+    <span class="p">):</span>
+        <span class="n">output_document</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">input_document</span><span class="o">.</span><span class="n">title</span>
+</code></pre></div>
+<p>And a little more complex example:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pydantic.main</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+
+<span class="kn">from</span> <span class="nn">beanie</span> <span class="kn">import</span> <span class="n">Document</span><span class="p">,</span> <span class="n">iterative_migration</span>
+
+
+<span class="k">class</span> <span class="nc">OldTag</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">color</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+
+
+<span class="k">class</span> <span class="nc">Tag</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">color</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span>
+
+
+<span class="k">class</span> <span class="nc">OldNote</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">tag</span><span class="p">:</span> <span class="n">OldTag</span>
+
+    <span class="k">class</span> <span class="nc">Collection</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;notes&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Note</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">tag</span><span class="p">:</span> <span class="n">Tag</span>
+
+    <span class="k">class</span> <span class="nc">Collection</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;notes&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Forward</span><span class="p">:</span>
+    <span class="nd">@iterative_migration</span><span class="p">()</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">change_color</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">input_document</span><span class="p">:</span> <span class="n">OldNote</span><span class="p">,</span> <span class="n">output_document</span><span class="p">:</span> <span class="n">Note</span>
+    <span class="p">):</span>
+        <span class="n">output_document</span><span class="o">.</span><span class="n">tag</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">input_document</span><span class="o">.</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span>
+
+
+<span class="k">class</span> <span class="nc">Backward</span><span class="p">:</span>
+    <span class="nd">@iterative_migration</span><span class="p">()</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">change_title</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">input_document</span><span class="p">:</span> <span class="n">Note</span><span class="p">,</span> <span class="n">output_document</span><span class="p">:</span> <span class="n">OldNote</span>
+    <span class="p">):</span>
+        <span class="n">output_document</span><span class="o">.</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">input_document</span><span class="o">.</span><span class="n">tag</span><span class="o">.</span><span class="n">title</span>
+</code></pre></div>
+<p>All the migrations examples can be found by <a href="https://github.com/roman-right/beanie/tree/feature/migrations/tests/migrations/migrations_for_test">link</a></p>
+<h3 id="free-fall-migrations">Free fall migrations</h3>
+<p>It is a much more flexible migration type, which allows to implementation of any migration logic. But at the same time, it is more verbose.</p>
+<p>To mark function as a free fall migration, must be used decorator <code>@free_fall_migration()</code> with the list of Document classes, which will be used in this migration. Function itself receives <code>session</code> as a parameter. It is used to be able to roll back the migration, if something went wrong. To be able to roll back, please provide session into the Documents methods. Like here:</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@free_fall_migration</span><span class="p">(</span><span class="n">document_models</span><span class="o">=</span><span class="p">[</span><span class="n">OldNote</span><span class="p">,</span> <span class="n">Note</span><span class="p">])</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">name_to_title</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+    <span class="k">async</span> <span class="k">for</span> <span class="n">old_note</span> <span class="ow">in</span> <span class="n">OldNote</span><span class="o">.</span><span class="n">find_all</span><span class="p">():</span>
+        <span class="n">new_note</span> <span class="o">=</span> <span class="n">Note</span><span class="p">(</span>
+            <span class="nb">id</span><span class="o">=</span><span class="n">old_note</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">old_note</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="n">old_note</span><span class="o">.</span><span class="n">tag</span>
+        <span class="p">)</span>
+        <span class="k">await</span> <span class="n">new_note</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="the-same-example-as-for-the-iterative-migration-but-with-free-fall-migration-type">The same example as for the iterative migration, but with free fall migration type</h4>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pydantic.main</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+
+<span class="kn">from</span> <span class="nn">beanie</span> <span class="kn">import</span> <span class="n">Document</span><span class="p">,</span> <span class="n">free_fall_migration</span>
+
+
+<span class="k">class</span> <span class="nc">Tag</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">color</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+
+
+<span class="k">class</span> <span class="nc">OldNote</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">tag</span><span class="p">:</span> <span class="n">Tag</span>
+
+    <span class="k">class</span> <span class="nc">Collection</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;notes&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Note</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">tag</span><span class="p">:</span> <span class="n">Tag</span>
+
+    <span class="k">class</span> <span class="nc">Collection</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;notes&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">Forward</span><span class="p">:</span>
+    <span class="nd">@free_fall_migration</span><span class="p">(</span><span class="n">document_models</span><span class="o">=</span><span class="p">[</span><span class="n">OldNote</span><span class="p">,</span> <span class="n">Note</span><span class="p">])</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">name_to_title</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+        <span class="k">async</span> <span class="k">for</span> <span class="n">old_note</span> <span class="ow">in</span> <span class="n">OldNote</span><span class="o">.</span><span class="n">find_all</span><span class="p">():</span>
+            <span class="n">new_note</span> <span class="o">=</span> <span class="n">Note</span><span class="p">(</span>
+                <span class="nb">id</span><span class="o">=</span><span class="n">old_note</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">old_note</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="n">old_note</span><span class="o">.</span><span class="n">tag</span>
+            <span class="p">)</span>
+            <span class="k">await</span> <span class="n">new_note</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Backward</span><span class="p">:</span>
+    <span class="nd">@free_fall_migration</span><span class="p">(</span><span class="n">document_models</span><span class="o">=</span><span class="p">[</span><span class="n">OldNote</span><span class="p">,</span> <span class="n">Note</span><span class="p">])</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">title_to_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">):</span>
+        <span class="k">async</span> <span class="k">for</span> <span class="n">old_note</span> <span class="ow">in</span> <span class="n">Note</span><span class="o">.</span><span class="n">find_all</span><span class="p">():</span>
+            <span class="n">new_note</span> <span class="o">=</span> <span class="n">OldNote</span><span class="p">(</span>
+                <span class="nb">id</span><span class="o">=</span><span class="n">old_note</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">old_note</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="n">tag</span><span class="o">=</span><span class="n">old_note</span><span class="o">.</span><span class="n">tag</span>
+            <span class="p">)</span>
+            <span class="k">await</span> <span class="n">new_note</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">)</span>
+</code></pre></div>
+<p>All the migrations examples can be found by <a href="https://github.com/roman-right/beanie/tree/feature/migrations/tests/migrations/migrations_for_test">link</a></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../odm/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              ODM
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../../changelog/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Changelog
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d892486b.min.js"></script>
+      
+    
+  </body>
+</html>
