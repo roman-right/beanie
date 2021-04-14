@@ -1,21 +1,21 @@
 from enum import Enum
-from typing import Optional, List, Type, Union, Tuple
+from typing import List, Optional, Tuple, Type, Union
 
 import pymongo
 from bson import ObjectId
-from motor.motor_asyncio import AsyncIOMotorDatabase, AsyncIOMotorCollection
+from motor.motor_asyncio import AsyncIOMotorCollection, AsyncIOMotorDatabase
 from pydantic import Field, validator
-from pydantic.main import BaseModel
-from pymongo.results import DeleteResult, UpdateResult, InsertOneResult
+from pydantic.main import BaseModel, PrivateAttr
+from pymongo.results import DeleteResult, InsertOneResult, UpdateResult
 
 from beanie.collection import collection_factory
 from beanie.cursor import Cursor
 from beanie.deprecated import get_collection_class_from_document_meta_class
 from beanie.exceptions import (
-    DocumentWasNotSaved,
-    DocumentNotFound,
-    DocumentAlreadyCreated,
     CollectionWasNotInitialized,
+    DocumentAlreadyCreated,
+    DocumentNotFound,
+    DocumentWasNotSaved,
 )
 from beanie.fields import PydanticObjectId
 
@@ -39,6 +39,7 @@ class FindOperationKWARGS(BaseModel):
 
 class Document(BaseModel):
     id: Optional[PydanticObjectId] = Field(None, alias="_id")
+    _is_created: bool = PrivateAttr(default=False)
 
     def __init__(self, *args, **kwargs):
         """
@@ -65,8 +66,9 @@ class Document(BaseModel):
         Insert one document to the collection
         :return: Document
         """
+        exclude = None if document.id else {"id"}
         return await cls.get_motor_collection().insert_one(
-            document.dict(by_alias=True, exclude={"id"})
+            document.dict(by_alias=True, exclude=exclude)
         )
 
     @classmethod
@@ -77,7 +79,10 @@ class Document(BaseModel):
         """
         return await cls.get_motor_collection().insert_many(
             [
-                document.dict(by_alias=True, exclude={"id"})
+                document.dict(
+                    by_alias=True,
+                    exclude=None if document.id else {"id"},
+                )
                 for document in documents
             ]
         )
@@ -87,12 +92,19 @@ class Document(BaseModel):
         Create the document in the database
         :return: Document
         """
-        if self.id is not None:
+        if self._is_created:
             raise DocumentAlreadyCreated
+        exclude = None if self.id else {"id"}
         result = await self.get_motor_collection().insert_one(
-            self.dict(by_alias=True, exclude={"id"})
+            self.dict(by_alias=True, exclude=exclude)
         )
-        self.id = PydanticObjectId(result.inserted_id)
+
+        if isinstance(result.inserted_id, ObjectId):
+            self.id = PydanticObjectId(result.inserted_id)
+        else:
+            self.id = result.inserted_id
+
+        self._is_created = True
         return self
 
     @classmethod
@@ -169,8 +181,9 @@ class Document(BaseModel):
         Fully update one document in the database
         :return: None
         """
+        exclude = None if document.id else {"id"}
         result = await cls.get_motor_collection().replace_one(
-            filter_query, document.dict(by_alias=True, exclude={"id"})
+            filter_query, document.dict(by_alias=True, exclude=exclude)
         )
         if not result.raw_result["updatedExisting"]:
             raise DocumentNotFound
