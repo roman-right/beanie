@@ -206,15 +206,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#stable" class="md-nav__link">
-    Stable
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#beta-with-migrations" class="md-nav__link">
-    Beta with migrations
+  <a href="#pip" class="md-nav__link">
+    PIP
   </a>
   
 </li>
@@ -223,26 +216,6 @@
   <a href="#poetry" class="md-nav__link">
     Poetry
   </a>
-  
-    <nav class="md-nav" aria-label="Poetry">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#stable_1" class="md-nav__link">
-    Stable
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#beta-with-migrations_1" class="md-nav__link">
-    Beta with migrations
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -254,6 +227,47 @@
         <li class="md-nav__item">
   <a href="#quick-start" class="md-nav__link">
     Quick Start
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#materials" class="md-nav__link">
+    Materials
+  </a>
+  
+    <nav class="md-nav" aria-label="Materials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#odm" class="md-nav__link">
+    ODM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migrations" class="md-nav__link">
+    Migrations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#articles" class="md-nav__link">
+    Articles
   </a>
   
 </li>
@@ -408,15 +422,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#stable" class="md-nav__link">
-    Stable
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#beta-with-migrations" class="md-nav__link">
-    Beta with migrations
+  <a href="#pip" class="md-nav__link">
+    PIP
   </a>
   
 </li>
@@ -425,26 +432,6 @@
   <a href="#poetry" class="md-nav__link">
     Poetry
   </a>
-  
-    <nav class="md-nav" aria-label="Poetry">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#stable_1" class="md-nav__link">
-    Stable
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#beta-with-migrations_1" class="md-nav__link">
-    Beta with migrations
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -456,6 +443,47 @@
         <li class="md-nav__item">
   <a href="#quick-start" class="md-nav__link">
     Quick Start
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#materials" class="md-nav__link">
+    Materials
+  </a>
+  
+    <nav class="md-nav" aria-label="Materials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#odm" class="md-nav__link">
+    ODM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#migrations" class="md-nav__link">
+    Migrations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#articles" class="md-nav__link">
+    Articles
   </a>
   
 </li>
@@ -476,28 +504,66 @@
                   <h1>Home</h1>
                 
                 <p><img alt="Beanie" src="https://raw.githubusercontent.com/roman-right/beanie/main/assets/logo/with_text.svg" /></p>
-<p><a href="https://github.com/roman-right/beanie">Beanie</a> - is an asynchronous ODM for MongoDB, based on <a href="https://motor.readthedocs.io/en/stable/">Motor</a>
+<p>Beanie - is an asynchronous ODM for MongoDB, based on <a href="https://motor.readthedocs.io/en/stable/">Motor</a>
 and <a href="https://pydantic-docs.helpmanual.io/">Pydantic</a>.</p>
 <p>It uses an abstraction over Pydantic models and Motor collections to work with the database. Class Document allows to
 create, replace, update, get, find and aggregate.</p>
-<h2 id="installation">Installation</h2>
-<h5 id="stable">Stable</h5>
+<p>Beanie supports migrations out of the box.</p>
+<h3 id="installation">Installation</h3>
+<h4 id="pip">PIP</h4>
 <div class="highlight"><pre><span></span><code>pip install beanie
 </code></pre></div>
-<h5 id="beta-with-migrations">Beta with migrations</h5>
-<div class="highlight"><pre><span></span><code>pip install <span class="nv">beanie</span><span class="o">==</span><span class="m">0</span>.4.b1
-</code></pre></div>
 <h4 id="poetry">Poetry</h4>
-<h5 id="stable_1">Stable</h5>
 <div class="highlight"><pre><span></span><code>poetry add beanie
 </code></pre></div>
-<h5 id="beta-with-migrations_1">Beta with migrations</h5>
-<div class="highlight"><pre><span></span><code>poetry add <span class="nv">beanie</span><span class="o">==</span><span class="m">0</span>.4.b1
+<h3 id="quick-start">Quick Start</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">List</span>
+
+<span class="kn">import</span> <span class="nn">motor</span>
+<span class="kn">from</span> <span class="nn">beanie</span> <span class="kn">import</span> <span class="n">Document</span><span class="p">,</span> <span class="n">init_beanie</span>
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+
+
+<span class="k">class</span> <span class="nc">Tag</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">color</span><span class="p">:</span> <span class="nb">str</span>
+
+
+<span class="k">class</span> <span class="nc">Note</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">text</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">tag_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Tag</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">motor</span><span class="o">.</span><span class="n">motor_asyncio</span><span class="o">.</span><span class="n">AsyncIOMotorClient</span><span class="p">(</span>
+        <span class="s2">&quot;mongodb://user:pass@host:27017&quot;</span>
+    <span class="p">)</span>
+    <span class="k">await</span> <span class="n">init_beanie</span><span class="p">(</span><span class="n">database</span><span class="o">=</span><span class="n">client</span><span class="o">.</span><span class="n">db_name</span><span class="p">,</span> <span class="n">document_models</span><span class="o">=</span><span class="p">[</span><span class="n">Note</span><span class="p">])</span>
+
+    <span class="n">all_notes</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Note</span><span class="o">.</span><span class="n">find_all</span><span class="p">()</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
 </code></pre></div>
-<h2 id="quick-start">Quick Start</h2>
+<h3 id="materials">Materials</h3>
+<h4 id="odm">ODM</h4>
 <ul>
-<li><a href="tutorial/odm/">ODM</a></li>
-<li><a href="tutorial/migrations">Migrations</a></li>
+<li><strong><a href="https://roman-right.github.io/beanie/tutorial/odm/">Tutorial</a></strong> - ODM usage examples</li>
+<li><strong><a href="https://roman-right.github.io/beanie/documentation/odm/">Documentation</a></strong> - Full list of the ODM classes and
+  methods with descriptions</li>
+</ul>
+<h4 id="migrations">Migrations</h4>
+<ul>
+<li><strong><a href="https://roman-right.github.io/beanie/tutorial/odm/">Tutorial</a></strong> - Migrations usage examples</li>
+</ul>
+<h3 id="resources">Resources</h3>
+<ul>
+<li><strong><a href="https://roman-right.github.io/beanie/changelog">Changelog</a></strong> - list of all the valuable changes</li>
+<li><strong><a href="https://discord.gg/ZTTnM7rMaz">Discord</a></strong> - ask your questions, share ideas or just say <code>Hello!!</code></li>
+</ul>
+<h3 id="articles">Articles</h3>
+<ul>
+<li><a href="https://dev.to/romanright/announcing-beanie-mongodb-odm-56e">Announcing Beanie - MongoDB ODM</a></li>
+<li><a href="https://developer.mongodb.com/article/beanie-odm-fastapi-cocktails/">Build a Cocktail API with Beanie and MongoDB</a></li>
+<li><a href="https://dev.to/romanright/mongodb-indexes-with-beanie-43e8">MongoDB indexes with Beanie</a></li>
 </ul>
                 
               
