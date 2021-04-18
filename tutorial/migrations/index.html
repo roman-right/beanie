@@ -628,7 +628,7 @@
     <span class="p">):</span>
         <span class="n">output_document</span><span class="o">.</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">input_document</span><span class="o">.</span><span class="n">tag</span><span class="o">.</span><span class="n">title</span>
 </code></pre></div>
-<p>All the migrations examples can be found by <a href="https://github.com/roman-right/beanie/tree/feature/migrations/tests/migrations/migrations_for_test">link</a></p>
+<p>All the migrations examples can be found by <a href="https://github.com/roman-right/beanie/tree/main/tests/migrations/migrations_for_test">link</a></p>
 <h3 id="free-fall-migrations">Free fall migrations</h3>
 <p>It is a much more flexible migration type, which allows to implementation of any migration logic. But at the same time, it is more verbose.</p>
 <p>To mark function as a free fall migration, must be used decorator <code>@free_fall_migration()</code> with the list of Document classes, which will be used in this migration. Function itself receives <code>session</code> as a parameter. It is used to be able to roll back the migration, if something went wrong. To be able to roll back, please provide session into the Documents methods. Like here:</p>
@@ -686,7 +686,7 @@
             <span class="p">)</span>
             <span class="k">await</span> <span class="n">new_note</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">)</span>
 </code></pre></div>
-<p>All the migrations examples can be found by <a href="https://github.com/roman-right/beanie/tree/feature/migrations/tests/migrations/migrations_for_test">link</a></p>
+<p>All the migrations examples can be found by <a href="https://github.com/roman-right/beanie/tree/main/tests/migrations/migrations_for_test">link</a></p>
                 
               
               
