@@ -1,0 +1,862 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
+    
+    
+      
+        <title>ODM - Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.33e2939f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#table-of-contents" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ODM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Tutorial
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/odm/" class="md-nav__link">
+        ODM
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/migrations/" class="md-nav__link">
+        Migrations
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Documentation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Documentation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ODM
+      </a>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="table-of-contents">Table of Contents</h1>
+<ul>
+<li><a href="#collection">collection</a></li>
+<li><a href="#collection.collection_factory">collection_factory</a></li>
+<li><a href="#general">general</a></li>
+<li><a href="#general.get_model">get_model</a></li>
+<li><a href="#general.init_beanie">init_beanie</a></li>
+<li><a href="#documents">documents</a></li>
+<li><a href="#documents.Document">Document</a><ul>
+<li><a href="#documents.Document.__init__">__init__</a></li>
+<li><a href="#documents.Document.insert_one">insert_one</a></li>
+<li><a href="#documents.Document.insert_many">insert_many</a></li>
+<li><a href="#documents.Document.create">create</a></li>
+<li><a href="#documents.Document.find_one">find_one</a></li>
+<li><a href="#documents.Document.find_many">find_many</a></li>
+<li><a href="#documents.Document.find_all">find_all</a></li>
+<li><a href="#documents.Document.get">get</a></li>
+<li><a href="#documents.Document.replace_one">replace_one</a></li>
+<li><a href="#documents.Document.replace_many">replace_many</a></li>
+<li><a href="#documents.Document.replace">replace</a></li>
+<li><a href="#documents.Document.update_one">update_one</a></li>
+<li><a href="#documents.Document.update_many">update_many</a></li>
+<li><a href="#documents.Document.update_all">update_all</a></li>
+<li><a href="#documents.Document.update">update</a></li>
+<li><a href="#documents.Document.delete_one">delete_one</a></li>
+<li><a href="#documents.Document.delete_many">delete_many</a></li>
+<li><a href="#documents.Document.delete_all">delete_all</a></li>
+<li><a href="#documents.Document.delete">delete</a></li>
+<li><a href="#documents.Document.aggregate">aggregate</a></li>
+<li><a href="#documents.Document.count_documents">count_documents</a></li>
+<li><a href="#documents.Document.init_collection">init_collection</a></li>
+<li><a href="#documents.Document.get_motor_collection">get_motor_collection</a></li>
+<li><a href="#documents.Document.inspect_collection">inspect_collection</a></li>
+</ul>
+</li>
+<li><a href="#__init__">__init__</a></li>
+<li><a href="#cursor">cursor</a></li>
+<li><a href="#cursor.Cursor">Cursor</a><ul>
+<li><a href="#cursor.Cursor.to_list">to_list</a></li>
+</ul>
+</li>
+<li><a href="#models">models</a></li>
+<li><a href="#models.SortDirection">SortDirection</a></li>
+<li><a href="#models.FindOperationKWARGS">FindOperationKWARGS</a></li>
+<li><a href="#models.InspectionStatuses">InspectionStatuses</a></li>
+<li><a href="#models.InspectionError">InspectionError</a></li>
+<li><a href="#models.InspectionResult">InspectionResult</a></li>
+<li><a href="#fields">fields</a></li>
+<li><a href="#fields.Indexed">Indexed</a></li>
+<li><a href="#fields.PydanticObjectId">PydanticObjectId</a></li>
+</ul>
+<p><a name="collection"></a></p>
+<h1 id="collection">collection</h1>
+<p><a name="collection.collection_factory"></a></p>
+<h4 id="collection_factory">collection_factory</h4>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="n">collection_factory</span><span class="p">(</span><span class="n">database</span><span class="p">:</span> <span class="n">AsyncIOMotorDatabase</span><span class="p">,</span> <span class="n">document_class</span><span class="p">:</span> <span class="n">Type</span><span class="p">,</span> <span class="n">allow_index_dropping</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">collection_class</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Type</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Type</span>
+</code></pre></div>
+<p>Collection factory.
+Creates internal CollectionMeta class for the Document on the init step,</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>database</code>: AsyncIOMotorDatabase - Motor database instance</li>
+<li><code>document_class</code>: Type - a class, inherited from Document class</li>
+<li><code>allow_index_dropping</code>: bool - if index dropping is allowed</li>
+<li><code>collection_class</code>: Optional[Type] - Collection, which was set up by user</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>Type - Collection class</p>
+<p><a name="general"></a></p>
+<h1 id="general">general</h1>
+<p><a name="general.get_model"></a></p>
+<h4 id="get_model">get_model</h4>
+<div class="highlight"><pre><span></span><code><span class="n">get_model</span><span class="p">(</span><span class="n">dot_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Type</span><span class="p">[</span><span class="n">Document</span><span class="p">]</span>
+</code></pre></div>
+<p>Get the model by the path in format bar.foo.Model</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>dot_path</code>: str - dot seprated path to the model</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>Type[Document] - class of the model</p>
+<p><a name="general.init_beanie"></a></p>
+<h4 id="init_beanie">init_beanie</h4>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="n">init_beanie</span><span class="p">(</span><span class="n">database</span><span class="p">:</span> <span class="n">AsyncIOMotorDatabase</span><span class="p">,</span> <span class="n">document_models</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">Document</span><span class="p">],</span> <span class="nb">str</span><span class="p">]],</span> <span class="n">allow_index_dropping</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+<p>Beanie initialization</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>database</code>: AsyncIOMotorDatabase - motor database instance</li>
+<li><code>document_models</code>: List[Union[Type[Document], str]] - model classes or strings with dot separated paths</li>
+<li><code>allow_index_dropping</code>: bool - if index dropping is allowed. Default True</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>None</p>
+<p><a name="documents"></a></p>
+<h1 id="documents">documents</h1>
+<p><a name="documents.Document"></a></p>
+<h2 id="document-objects">Document Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Document</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">)</span>
+</code></pre></div>
+<p>Document Mapping class.</p>
+<p>Inherited from Pydantic BaseModel ß includes all the respective methods.
+Contains id filed - MongoDB document ObjectID "_id" field</p>
+<p><a name="documents.Document.__init__"></a></p>
+<h4 id="__init__">__init__</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div>
+<p>Initialization</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>args</code>: </li>
+<li><code>kwargs</code>: </li>
+</ul>
+<p><a name="documents.Document.insert_one"></a></p>
+<h4 id="insert_one">insert_one</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="k">async</span> <span class="n">insert_one</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">document</span><span class="p">:</span> <span class="s2">&quot;Document&quot;</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">ClientSession</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">InsertOneResult</span>
+</code></pre></div>
+<p>Insert one document to the collection</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>document</code>: Document - document to insert</li>
+<li><code>session</code>: ClientSession - pymongo session</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>Document</p>
+<p><a name="documents.Document.insert_many"></a></p>
+<h4 id="insert_many">insert_many</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="k">async</span> <span class="n">insert_many</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">documents</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="s2">&quot;Document&quot;</span><span class="p">],</span> <span class="n">keep_ids</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">ClientSession</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+<p>Insert many documents to the collection</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>documents</code>: List["Document"] - documents to insert</li>
+<li><code>keep_ids</code>: bool - should it insert documents with ids or ignore it? Default False - ignore</li>
+<li><code>session</code>: ClientSession - pymongo session</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>Document</p>
+<p><a name="documents.Document.create"></a></p>
+<h4 id="create">create</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="k">async</span> <span class="n">create</span><span class="p">(</span><span class="n">session</span><span class="p">:</span> <span class="n">ClientSession</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Document&quot;</span>
+</code></pre></div>
+<p>Create the document in the database</p>
+<p><strong>Returns</strong>:</p>
+<p>Document</p>
+<p><a name="documents.Document.find_one"></a></p>
+<h4 id="find_one">find_one</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="k">async</span> <span class="n">find_one</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">filter_query</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">ClientSession</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="s2">&quot;Document&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+</code></pre></div>
+<p>Find one document by criteria</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>filter_query</code>: dict - The selection criteria</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>Union["Document", None]</p>
+<p><a name="documents.Document.find_many"></a></p>
+<h4 id="find_many">find_many</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="n">find_many</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">filter_query</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">skip</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">sort</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">SortDirection</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">ClientSession</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Cursor</span>
+</code></pre></div>
+<p>Find many documents by criteria</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>filter_query</code>: dict - The selection criteria.</li>
+<li><code>skip</code>: Optional[int] - The number of documents to omit.</li>
+<li><code>limit</code>: Optional[int] - The maximum number of results to return.</li>
+<li><code>sort</code>: Union[None, str, List[Tuple[str, SortDirection]]] - A key or a list of (key, direction) pairs
+             specifying the sort order for this query.</li>
+<li><code>session</code>: ClientSession - pymongo session</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>Cursor - AsyncGenerator of the documents</p>
+<p><a name="documents.Document.find_all"></a></p>
+<h4 id="find_all">find_all</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="n">find_all</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">skip</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">sort</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">SortDirection</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">ClientSession</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Cursor</span>
+</code></pre></div>
+<p>Get all the documents</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>skip</code>: Optional[int] - The number of documents to omit.</li>
+<li><code>limit</code>: Optional[int] - The maximum number of results to return.</li>
+<li><code>sort</code>: Union[None, str, List[Tuple[str, SortDirection]]] - A key or a list of (key, direction) pairs
+             specifying the sort order for this query.</li>
+<li><code>session</code>: ClientSession - pymongo session</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>Cursor - AsyncGenerator of the documents</p>
+<p><a name="documents.Document.get"></a></p>
+<h4 id="get">get</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="k">async</span> <span class="n">get</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">document_id</span><span class="p">:</span> <span class="n">PydanticObjectId</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">ClientSession</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="s2">&quot;Document&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+</code></pre></div>
+<p>Get document by id</p>
+<p><strong>Returns</strong>:</p>
+<p>Union["Document", None]</p>
+<p><a name="documents.Document.replace_one"></a></p>
+<h4 id="replace_one">replace_one</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="k">async</span> <span class="n">replace_one</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">filter_query</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">document</span><span class="p">:</span> <span class="s2">&quot;Document&quot;</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">ClientSession</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+</code></pre></div>
+<p>Fully update one document in the database</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>filter_query</code>: dict - the selection criteria.</li>
+<li><code>document</code>: Document - the document which will replace the found one.</li>
+<li><code>session</code>: ClientSession - pymongo session.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>None</p>
+<p><a name="documents.Document.replace_many"></a></p>
+<h4 id="replace_many">replace_many</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="k">async</span> <span class="n">replace_many</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">documents</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="s2">&quot;Document&quot;</span><span class="p">],</span> <span class="n">session</span><span class="p">:</span> <span class="n">ClientSession</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>documents</code>: List["Document"]</li>
+<li><code>session</code>: ClientSession - pymongo session.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>None</p>
+<p><a name="documents.Document.replace"></a></p>
+<h4 id="replace">replace</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="k">async</span> <span class="n">replace</span><span class="p">(</span><span class="n">session</span><span class="p">:</span> <span class="n">ClientSession</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Document&quot;</span>
+</code></pre></div>
+<p>Fully update the document in the database</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>session</code>: ClientSession - pymongo session.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>None</p>
+<p><a name="documents.Document.update_one"></a></p>
+<h4 id="update_one">update_one</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="k">async</span> <span class="n">update_one</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">filter_query</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">update_query</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">ClientSession</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">UpdateResult</span>
+</code></pre></div>
+<p>Partially update already created document</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>filter_query</code>: dict - the modifications to apply.</li>
+<li><code>update_query</code>: dict - the selection criteria for the update.</li>
+<li><code>session</code>: ClientSession - pymongo session.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>UpdateResult - pymongo UpdateResult instance</p>
+<p><a name="documents.Document.update_many"></a></p>
+<h4 id="update_many">update_many</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="k">async</span> <span class="n">update_many</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">filter_query</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">update_query</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">ClientSession</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">UpdateResult</span>
+</code></pre></div>
+<p>Partially update many documents</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>filter_query</code>: dict - the selection criteria for the update.</li>
+<li><code>update_query</code>: dict - the modifications to apply.</li>
+<li><code>session</code>: ClientSession - pymongo session.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>UpdateResult - pymongo UpdateResult instance</p>
+<p><a name="documents.Document.update_all"></a></p>
+<h4 id="update_all">update_all</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="k">async</span> <span class="n">update_all</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">update_query</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">ClientSession</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">UpdateResult</span>
+</code></pre></div>
+<p>Partially update all the documents</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>update_query</code>: dict - the modifications to apply.</li>
+<li><code>session</code>: ClientSession - pymongo session.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>UpdateResult - pymongo UpdateResult instance</p>
+<p><a name="documents.Document.update"></a></p>
+<h4 id="update">update</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="k">async</span> <span class="n">update</span><span class="p">(</span><span class="n">update_query</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">ClientSession</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
+<p>Partially update the document in the database</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>update_query</code>: dict - the modifications to apply.</li>
+<li><code>session</code>: ClientSession - pymongo session.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>None</p>
+<p><a name="documents.Document.delete_one"></a></p>
+<h4 id="delete_one">delete_one</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="k">async</span> <span class="n">delete_one</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">filter_query</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">ClientSession</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DeleteResult</span>
+</code></pre></div>
+<p>Delete one document</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>filter_query</code>: dict - the selection criteria</li>
+<li><code>session</code>: ClientSession - pymongo session.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>DeleteResult - pymongo DeleteResult instance</p>
+<p><a name="documents.Document.delete_many"></a></p>
+<h4 id="delete_many">delete_many</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="k">async</span> <span class="n">delete_many</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">filter_query</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">ClientSession</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DeleteResult</span>
+</code></pre></div>
+<p>Delete many documents</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>filter_query</code>: dict - the selection criteria.</li>
+<li><code>session</code>: ClientSession - pymongo session.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>DeleteResult - pymongo DeleteResult instance.</p>
+<p><a name="documents.Document.delete_all"></a></p>
+<h4 id="delete_all">delete_all</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="k">async</span> <span class="n">delete_all</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">ClientSession</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DeleteResult</span>
+</code></pre></div>
+<p>Delete all the documents</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>session</code>: ClientSession - pymongo session.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>DeleteResult - pymongo DeleteResult instance.</p>
+<p><a name="documents.Document.delete"></a></p>
+<h4 id="delete">delete</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="k">async</span> <span class="n">delete</span><span class="p">(</span><span class="n">session</span><span class="p">:</span> <span class="n">ClientSession</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DeleteResult</span>
+</code></pre></div>
+<p>Delete the document</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>session</code>: ClientSession - pymongo session.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>DeleteResult - pymongo DeleteResult instance.</p>
+<p><a name="documents.Document.aggregate"></a></p>
+<h4 id="aggregate">aggregate</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="n">aggregate</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">aggregation_query</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span> <span class="n">item_model</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">ClientSession</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Cursor</span>
+</code></pre></div>
+<p>Aggregate</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>aggregation_query</code>: List[dict] - query with aggregation commands</li>
+<li><code>item_model</code>: Type[BaseModel] - model of item to return in the list of aggregations</li>
+<li><code>session</code>: ClientSession - pymongo session.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>Cursor - AsyncGenerator of aggregated items</p>
+<p><a name="documents.Document.count_documents"></a></p>
+<h4 id="count_documents">count_documents</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="k">async</span> <span class="n">count_documents</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">filter_query</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span>
+</code></pre></div>
+<p>Number of documents in the collections</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>filter_query</code>: dict - the selection criteria</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>int</p>
+<p><a name="documents.Document.init_collection"></a></p>
+<h4 id="init_collection">init_collection</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="k">async</span> <span class="n">init_collection</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">database</span><span class="p">:</span> <span class="n">AsyncIOMotorDatabase</span><span class="p">,</span> <span class="n">allow_index_dropping</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
+<p>Internal CollectionMeta class creator</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>database</code>: AsyncIOMotorDatabase - motor database instance</li>
+<li><code>allow_index_dropping</code>: bool - if index dropping is allowed</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>None</p>
+<p><a name="documents.Document.get_motor_collection"></a></p>
+<h4 id="get_motor_collection">get_motor_collection</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="n">get_motor_collection</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AsyncIOMotorCollection</span>
+</code></pre></div>
+<p>Get Motor Collection to access low level control</p>
+<p><strong>Returns</strong>:</p>
+<p>AsyncIOMotorCollection</p>
+<p><a name="documents.Document.inspect_collection"></a></p>
+<h4 id="inspect_collection">inspect_collection</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="nd">@classmethod</span>
+ <span class="o">|</span> <span class="k">async</span> <span class="n">inspect_collection</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">ClientSession</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">InspectionResult</span>
+</code></pre></div>
+<p>Check, if documents, stored in the MongoDB collection
+are compatible with the Document schema</p>
+<p><strong>Returns</strong>:</p>
+<p>InspectionResult</p>
+<p><a name="__init__"></a></p>
+<h1 id="__init___1">__init__</h1>
+<p><a name="cursor"></a></p>
+<h1 id="cursor">cursor</h1>
+<p><a name="cursor.Cursor"></a></p>
+<h2 id="cursor-objects">Cursor Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Cursor</span><span class="p">()</span>
+</code></pre></div>
+<p>Cursor class. Wrapper over AsyncIOMotorCursor, which parse result with model</p>
+<p><a name="cursor.Cursor.to_list"></a></p>
+<h4 id="to_list">to_list</h4>
+<div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="k">async</span> <span class="n">to_list</span><span class="p">(</span><span class="n">length</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="s2">&quot;Document&quot;</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="nb">dict</span><span class="p">]]</span>
+</code></pre></div>
+<p>Get list of documents</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>length</code>: Optional[int] - length of the list</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>Union[List["Document"], List[dict]]</p>
+<p><a name="models"></a></p>
+<h1 id="models">models</h1>
+<p><a name="models.SortDirection"></a></p>
+<h2 id="sortdirection-objects">SortDirection Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">SortDirection</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span>  <span class="n">Enum</span><span class="p">)</span>
+</code></pre></div>
+<p>Sorting directions</p>
+<p><a name="models.FindOperationKWARGS"></a></p>
+<h2 id="findoperationkwargs-objects">FindOperationKWARGS Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">FindOperationKWARGS</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">)</span>
+</code></pre></div>
+<p>KWARGS Parser for find operations</p>
+<p><a name="models.InspectionStatuses"></a></p>
+<h2 id="inspectionstatuses-objects">InspectionStatuses Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">InspectionStatuses</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span>  <span class="n">Enum</span><span class="p">)</span>
+</code></pre></div>
+<p>Statuses of the collection inspection</p>
+<p><a name="models.InspectionError"></a></p>
+<h2 id="inspectionerror-objects">InspectionError Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">InspectionError</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">)</span>
+</code></pre></div>
+<p>Inspection error details</p>
+<p><a name="models.InspectionResult"></a></p>
+<h2 id="inspectionresult-objects">InspectionResult Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">InspectionResult</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">)</span>
+</code></pre></div>
+<p>Collection inspection result</p>
+<p><a name="fields"></a></p>
+<h1 id="fields">fields</h1>
+<p><a name="fields.Indexed"></a></p>
+<h4 id="indexed">Indexed</h4>
+<div class="highlight"><pre><span></span><code><span class="n">Indexed</span><span class="p">(</span><span class="n">typ</span><span class="p">,</span> <span class="n">index_type</span><span class="o">=</span><span class="n">ASCENDING</span><span class="p">)</span>
+</code></pre></div>
+<p>Returns a subclass of <code>typ</code> with an extra attribute <code>_indexed</code> et to True.
+When instantiated the type of the result will actually be <code>typ</code>.</p>
+<p><a name="fields.PydanticObjectId"></a></p>
+<h2 id="pydanticobjectid-objects">PydanticObjectId Objects</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">PydanticObjectId</span><span class="p">(</span><span class="n">ObjectId</span><span class="p">)</span>
+</code></pre></div>
+<p>Object Id field. Compatible with Pydantic.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../../tutorial/migrations/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Migrations
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../../changelog/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Changelog
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d892486b.min.js"></script>
+      
+    
+  </body>
+</html>
