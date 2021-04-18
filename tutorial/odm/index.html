@@ -418,18 +418,12 @@
     Aggregate
   </a>
   
-    <nav class="md-nav" aria-label="Aggregate">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#relations" class="md-nav__link">
     Relations
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -775,18 +769,12 @@
     Aggregate
   </a>
   
-    <nav class="md-nav" aria-label="Aggregate">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#relations" class="md-nav__link">
     Relations
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1046,7 +1034,7 @@
     <span class="n">item_model</span><span class="o">=</span><span class="n">OutputModel</span>
 <span class="p">)</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
 </code></pre></div>
-<h3 id="relations">Relations</h3>
+<h2 id="relations">Relations</h2>
 <p>All the documents have unique id field <code>_id</code> of type <code>PydanticObjectId</code> which is associated with reserved <code>_id</code> field of the document in the MongoDB. To make relation between one document model and another this field can be used:</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Note</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>
   <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
