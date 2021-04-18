@@ -418,6 +418,19 @@
     Aggregate
   </a>
   
+    <nav class="md-nav" aria-label="Aggregate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relations" class="md-nav__link">
+    Relations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -762,6 +775,19 @@
     Aggregate
   </a>
   
+    <nav class="md-nav" aria-label="Aggregate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relations" class="md-nav__link">
+    Relations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1020,6 +1046,15 @@
     <span class="n">item_model</span><span class="o">=</span><span class="n">OutputModel</span>
 <span class="p">)</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
 </code></pre></div>
+<h3 id="relations">Relations</h3>
+<p>All the documents have unique id field <code>_id</code> of type <code>PydanticObjectId</code> which is associated with reserved <code>_id</code> field of the document in the MongoDB. To make relation between one document model and another this field can be used:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Note</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>
+  <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span> <span class="nc">NoteBook</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>
+    <span class="n">notes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">PydanticObjectId</span><span class="p">]</span>
+</code></pre></div>
+<p>Now it is possible to store <code>Note</code> ids to the <code>notes</code> field of the <code>NoteBook</code> class to save the relation.</p>
 <h2 id="collection-setup">Collection setup</h2>
 <p>Optionally collection of the document could be set up by the internal <code>Collection</code> class. Follow the examples:</p>
 <h3 id="collection-name">Collection name</h3>
