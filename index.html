@@ -259,8 +259,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
-    Resources
+  <a href="#example-projects" class="md-nav__link">
+    Example Projects
   </a>
   
 </li>
@@ -268,6 +268,13 @@
         <li class="md-nav__item">
   <a href="#articles" class="md-nav__link">
     Articles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
   </a>
   
 </li>
@@ -475,8 +482,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
-    Resources
+  <a href="#example-projects" class="md-nav__link">
+    Example Projects
   </a>
   
 </li>
@@ -484,6 +491,13 @@
         <li class="md-nav__item">
   <a href="#articles" class="md-nav__link">
     Articles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
   </a>
   
 </li>
@@ -504,10 +518,9 @@
                   <h1>Home</h1>
                 
                 <p><img alt="Beanie" src="https://raw.githubusercontent.com/roman-right/beanie/main/assets/logo/with_text.svg" /></p>
-<p><a href="https://github.com/roman-right/beanie">Beanie</a> - is an asynchronous ODM for MongoDB, based on <a href="https://motor.readthedocs.io/en/stable/">Motor</a>
+<p><a href="https://github.com/roman-right/beanie">Beanie</a> - is an Asynchronous Python ODM for MongoDB, based on <a href="https://motor.readthedocs.io/en/stable/">Motor</a>
 and <a href="https://pydantic-docs.helpmanual.io/">Pydantic</a>.</p>
-<p>It uses an abstraction over Pydantic models and Motor collections to work with the database. Class Document allows to
-create, replace, update, get, find and aggregate.</p>
+<p>It uses an abstraction over Pydantic models and Motor collections to work with the database. Class <strong>Document</strong> allows to: create, replace, update, get, find and aggregate.</p>
 <p>Beanie supports migrations out of the box.</p>
 <h3 id="installation">Installation</h3>
 <h4 id="pip">PIP</h4>
@@ -536,11 +549,15 @@ create, replace, update, get, find and aggregate.</p>
 
 
 <span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Crete Motor client</span>
     <span class="n">client</span> <span class="o">=</span> <span class="n">motor</span><span class="o">.</span><span class="n">motor_asyncio</span><span class="o">.</span><span class="n">AsyncIOMotorClient</span><span class="p">(</span>
         <span class="s2">&quot;mongodb://user:pass@host:27017&quot;</span>
     <span class="p">)</span>
+
+    <span class="c1"># Init beanie with the Note document class</span>
     <span class="k">await</span> <span class="n">init_beanie</span><span class="p">(</span><span class="n">database</span><span class="o">=</span><span class="n">client</span><span class="o">.</span><span class="n">db_name</span><span class="p">,</span> <span class="n">document_models</span><span class="o">=</span><span class="p">[</span><span class="n">Note</span><span class="p">])</span>
 
+    <span class="c1"># Get all the notes</span>
     <span class="n">all_notes</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Note</span><span class="o">.</span><span class="n">find_all</span><span class="p">()</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
 </code></pre></div>
 <h3 id="materials">Materials</h3>
@@ -554,17 +571,22 @@ create, replace, update, get, find and aggregate.</p>
 <ul>
 <li><strong><a href="https://roman-right.github.io/beanie/tutorial/odm/">Tutorial</a></strong> - Migrations usage examples</li>
 </ul>
+<h3 id="example-projects">Example Projects</h3>
+<ul>
+<li><strong><a href="https://github.com/roman-right/beanie-fastapi-demo">FastAPI Demo</a></strong> - Beanie and FastAPI collaboration demonstration. CRUD and Aggregation.</li>
+<li><strong><a href="https://github.com/roman-right/beanie-index-demo">Indexes Demo</a></strong> - Regular and Geo Indexes usage example wrapped to a microservice. </li>
+</ul>
+<h3 id="articles">Articles</h3>
+<ul>
+<li><strong><a href="https://dev.to/romanright/announcing-beanie-mongodb-odm-56e">Announcing Beanie - MongoDB ODM</a></strong></li>
+<li><strong><a href="https://developer.mongodb.com/article/beanie-odm-fastapi-cocktails/">Build a Cocktail API with Beanie and MongoDB</a></strong></li>
+<li><strong><a href="https://dev.to/romanright/mongodb-indexes-with-beanie-43e8">MongoDB indexes with Beanie</a></strong></li>
+</ul>
 <h3 id="resources">Resources</h3>
 <ul>
 <li><strong><a href="https://github.com/roman-right/beanie">GitHub</a></strong> - GitHub page of the project</li>
 <li><strong><a href="https://roman-right.github.io/beanie/changelog">Changelog</a></strong> - list of all the valuable changes</li>
 <li><strong><a href="https://discord.gg/ZTTnM7rMaz">Discord</a></strong> - ask your questions, share ideas or just say <code>Hello!!</code></li>
-</ul>
-<h3 id="articles">Articles</h3>
-<ul>
-<li><a href="https://dev.to/romanright/announcing-beanie-mongodb-odm-56e">Announcing Beanie - MongoDB ODM</a></li>
-<li><a href="https://developer.mongodb.com/article/beanie-odm-fastapi-cocktails/">Build a Cocktail API with Beanie and MongoDB</a></li>
-<li><a href="https://dev.to/romanright/mongodb-indexes-with-beanie-43e8">MongoDB indexes with Beanie</a></li>
 </ul>
                 
               
