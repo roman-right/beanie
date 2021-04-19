@@ -393,7 +393,8 @@ Creates internal CollectionMeta class for the Document on the init step,</p>
 <li><code>database</code>: AsyncIOMotorDatabase - Motor database instance</li>
 <li><code>document_class</code>: Type - a class, inherited from Document class</li>
 <li><code>allow_index_dropping</code>: bool - if index dropping is allowed</li>
-<li><code>collection_class</code>: Optional[Type] - Collection, which was set up by user</li>
+<li><code>collection_class</code>: Optional[Type] - Collection, which was set up
+by user</li>
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>Type - Collection class</p>
@@ -418,9 +419,10 @@ Creates internal CollectionMeta class for the Document on the init step,</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>database</code>: AsyncIOMotorDatabase - motor database instance</li>
-<li><code>document_models</code>: List[Union[Type[Document], str]] - model
-classes or strings with dot separated paths</li>
-<li><code>allow_index_dropping</code>: bool - if index dropping is allowed. Default True</li>
+<li><code>document_models</code>: List[Union[Type[Document], str]] - model classes
+or strings with dot separated paths</li>
+<li><code>allow_index_dropping</code>: bool - if index dropping is allowed.
+Default True</li>
 </ul>
 <p><strong>Returns</strong>:</p>
 <p>None</p>
@@ -465,7 +467,8 @@ Contains id filed - MongoDB document ObjectID "_id" field</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>documents</code>: List["Document"] - documents to insert</li>
-<li><code>keep_ids</code>: bool - should it insert documents with ids or ignore it? Default False - ignore</li>
+<li><code>keep_ids</code>: bool - should it insert documents with ids
+or ignore it? Default False - ignore</li>
 <li><code>session</code>: ClientSession - pymongo session</li>
 </ul>
 <p><strong>Returns</strong>:</p>
@@ -500,8 +503,9 @@ Contains id filed - MongoDB document ObjectID "_id" field</p>
 <li><code>filter_query</code>: dict - The selection criteria.</li>
 <li><code>skip</code>: Optional[int] - The number of documents to omit.</li>
 <li><code>limit</code>: Optional[int] - The maximum number of results to return.</li>
-<li><code>sort</code>: Union[None, str, List[Tuple[str, SortDirection]]] - A key or a list of (key, direction) pairs
-             specifying the sort order for this query.</li>
+<li><code>sort</code>: Union[None, str, List[Tuple[str, SortDirection]]] - A key
+or a list of (key, direction) pairs specifying the sort order
+for this query.</li>
 <li><code>session</code>: ClientSession - pymongo session</li>
 </ul>
 <p><strong>Returns</strong>:</p>
@@ -516,8 +520,9 @@ Contains id filed - MongoDB document ObjectID "_id" field</p>
 <ul>
 <li><code>skip</code>: Optional[int] - The number of documents to omit.</li>
 <li><code>limit</code>: Optional[int] - The maximum number of results to return.</li>
-<li><code>sort</code>: Union[None, str, List[Tuple[str, SortDirection]]] - A key or a list of (key, direction) pairs
-             specifying the sort order for this query.</li>
+<li><code>sort</code>: Union[None, str, List[Tuple[str, SortDirection]]] - A key
+or a list of (key, direction) pairs specifying the sort order
+for this query.</li>
 <li><code>session</code>: ClientSession - pymongo session</li>
 </ul>
 <p><strong>Returns</strong>:</p>
@@ -539,7 +544,8 @@ Contains id filed - MongoDB document ObjectID "_id" field</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>filter_query</code>: dict - the selection criteria.</li>
-<li><code>document</code>: Document - the document which will replace the found one.</li>
+<li><code>document</code>: Document - the document which will replace the found
+one.</li>
 <li><code>session</code>: ClientSession - pymongo session.</li>
 </ul>
 <p><strong>Returns</strong>:</p>
@@ -678,7 +684,8 @@ Contains id filed - MongoDB document ObjectID "_id" field</p>
 <p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>aggregation_query</code>: List[dict] - query with aggregation commands</li>
-<li><code>item_model</code>: Type[BaseModel] - model of item to return in the list of aggregations</li>
+<li><code>item_model</code>: Type[BaseModel] - model of item to return in the
+list of aggregations</li>
 <li><code>session</code>: ClientSession - pymongo session.</li>
 </ul>
 <p><strong>Returns</strong>:</p>
@@ -733,7 +740,8 @@ are compatible with the Document schema</p>
 <h2 id="cursor-objects">Cursor Objects</h2>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Cursor</span><span class="p">()</span>
 </code></pre></div>
-<p>Cursor class. Wrapper over AsyncIOMotorCursor, which parse result with model</p>
+<p>Cursor class. Wrapper over AsyncIOMotorCursor,
+which parse result with model</p>
 <p><a name="cursor.Cursor.to_list"></a></p>
 <h4 id="to_list">to_list</h4>
 <div class="highlight"><pre><span></span><code> <span class="o">|</span> <span class="k">async</span> <span class="n">to_list</span><span class="p">(</span><span class="n">length</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="s2">&quot;Document&quot;</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="nb">dict</span><span class="p">]]</span>
