@@ -234,11 +234,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#materials" class="md-nav__link">
-    Materials
+  <a href="#documentation" class="md-nav__link">
+    Documentation
   </a>
   
-    <nav class="md-nav" aria-label="Materials">
+    <nav class="md-nav" aria-label="Documentation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -458,11 +458,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#materials" class="md-nav__link">
-    Materials
+  <a href="#documentation" class="md-nav__link">
+    Documentation
   </a>
   
-    <nav class="md-nav" aria-label="Materials">
+    <nav class="md-nav" aria-label="Documentation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -521,10 +521,11 @@
                   <h1>Home</h1>
                 
                 <p><img alt="Beanie" src="https://raw.githubusercontent.com/roman-right/beanie/main/assets/logo/with_text.svg" /></p>
-<p><a href="https://github.com/roman-right/beanie">Beanie</a> - is an Asynchronous Python ODM for MongoDB, based on <a href="https://motor.readthedocs.io/en/stable/">Motor</a>
-and <a href="https://pydantic-docs.helpmanual.io/">Pydantic</a>.</p>
-<p>It uses an abstraction over Pydantic models and Motor collections to work with the database. Class <strong>Document</strong> allows to: create, replace, update, get, find and aggregate.</p>
-<p>Beanie supports migrations out of the box.</p>
+<p><a href="https://github.com/roman-right/beanie">Beanie</a> - is an Asynchronous Python object-document mapper (ODM) for MongoDB, based on <a href="https://motor.readthedocs.io/en/stable/">Motor</a> and <a href="https://pydantic-docs.helpmanual.io/">Pydantic</a>.</p>
+<p>When using Beanie each database collection has a corresponding <code>Document</code> that is used to interact with that collection.
+In addition to retrieving data, Beanie allows you to add, update, or delete documents from the collection as well.</p>
+<p>Beanie saves you time by removing boiler-plate code and it helps you focus on the parts of your app that actually matter.</p>
+<p>Data and schema migrations are supported by Beanie out of the box.</p>
 <h3 id="installation">Installation</h3>
 <h4 id="pip">PIP</h4>
 <div class="highlight"><pre><span></span><code>pip install beanie
@@ -563,11 +564,11 @@ and <a href="https://pydantic-docs.helpmanual.io/">Pydantic</a>.</p>
     <span class="c1"># Get all the notes</span>
     <span class="n">all_notes</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Note</span><span class="o">.</span><span class="n">find_all</span><span class="p">()</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
 </code></pre></div>
-<h3 id="materials">Materials</h3>
+<h3 id="documentation">Documentation</h3>
 <h4 id="odm">ODM</h4>
 <ul>
 <li><strong><a href="https://roman-right.github.io/beanie/tutorial/odm/">Tutorial</a></strong> - ODM usage examples</li>
-<li><strong><a href="https://roman-right.github.io/beanie/documentation/odm/">Documentation</a></strong> - Full list of the ODM classes and
+<li><strong><a href="https://roman-right.github.io/beanie/documentation/odm/">API</a></strong> - Full list of the ODM classes and
   methods with descriptions</li>
 </ul>
 <h4 id="migrations">Migrations</h4>
@@ -584,6 +585,7 @@ and <a href="https://pydantic-docs.helpmanual.io/">Pydantic</a>.</p>
 <li><strong><a href="https://dev.to/romanright/announcing-beanie-mongodb-odm-56e">Announcing Beanie - MongoDB ODM</a></strong></li>
 <li><strong><a href="https://developer.mongodb.com/article/beanie-odm-fastapi-cocktails/">Build a Cocktail API with Beanie and MongoDB</a></strong></li>
 <li><strong><a href="https://dev.to/romanright/mongodb-indexes-with-beanie-43e8">MongoDB indexes with Beanie</a></strong></li>
+<li><strong><a href="https://dev.to/romanright/beanie-projections-reducing-network-and-database-load-3bih">Beanie Projections. Reducing network and database load.</a></strong></li>
 </ul>
 <h3 id="resources">Resources</h3>
 <ul>
