@@ -14,7 +14,7 @@
     
     
       
-        <title>Fields - Documentation</title>
+        <title>Aggregate - Documentation</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#beanieodmfields" class="md-skip">
+        <a href="#aggregations" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fields
+              Aggregate
             
           </span>
         </div>
@@ -184,12 +184,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         Tutorial
@@ -207,7 +209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/install/" class="md-nav__link">
+      <a href="../install/" class="md-nav__link">
         Install and set up
       </a>
     </li>
@@ -219,7 +221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/insert/" class="md-nav__link">
+      <a href="../insert/" class="md-nav__link">
         Insert
       </a>
     </li>
@@ -231,7 +233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/find/" class="md-nav__link">
+      <a href="../find/" class="md-nav__link">
         Find
       </a>
     </li>
@@ -243,7 +245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/update/" class="md-nav__link">
+      <a href="../update/" class="md-nav__link">
         Update
       </a>
     </li>
@@ -255,7 +257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/delete/" class="md-nav__link">
+      <a href="../delete/" class="md-nav__link">
         Delete
       </a>
     </li>
@@ -265,11 +267,65 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../tutorial/aggregate/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Aggregate
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Aggregate
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preset-aggregations" class="md-nav__link">
+    Preset aggregations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aggregate-over-collection" class="md-nav__link">
+    Aggregate over collection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#over-subsets" class="md-nav__link">
+    Over subsets
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -286,14 +342,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       <label class="md-nav__link" for="__nav_3">
         Api
@@ -311,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../document/" class="md-nav__link">
+      <a href="../../api/document/" class="md-nav__link">
         Document
       </a>
     </li>
@@ -323,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../queries/" class="md-nav__link">
+      <a href="../../api/queries/" class="md-nav__link">
         Query
       </a>
     </li>
@@ -335,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../interfaces/" class="md-nav__link">
+      <a href="../../api/interfaces/" class="md-nav__link">
         Interfaces
       </a>
     </li>
@@ -368,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../operators/find/" class="md-nav__link">
+      <a href="../../api/operators/find/" class="md-nav__link">
         Find
       </a>
     </li>
@@ -380,7 +434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../operators/update/" class="md-nav__link">
+      <a href="../../api/operators/update/" class="md-nav__link">
         Update
       </a>
     </li>
@@ -396,87 +450,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Fields
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../api/fields/" class="md-nav__link">
         Fields
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#beanieodmfields" class="md-nav__link">
-    beanie.odm.fields
-  </a>
-  
-    <nav class="md-nav" aria-label="beanie.odm.fields">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#indexed" class="md-nav__link">
-    Indexed
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pydanticobjectid" class="md-nav__link">
-    PydanticObjectId
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#expressionfield" class="md-nav__link">
-    ExpressionField
-  </a>
-  
-    <nav class="md-nav" aria-label="ExpressionField">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#__getattr__" class="md-nav__link">
-    __getattr__
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -533,6 +511,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -541,49 +521,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#beanieodmfields" class="md-nav__link">
-    beanie.odm.fields
-  </a>
-  
-    <nav class="md-nav" aria-label="beanie.odm.fields">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#indexed" class="md-nav__link">
-    Indexed
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pydanticobjectid" class="md-nav__link">
-    PydanticObjectId
+  <a href="#preset-aggregations" class="md-nav__link">
+    Preset aggregations
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#expressionfield" class="md-nav__link">
-    ExpressionField
-  </a>
-  
-    <nav class="md-nav" aria-label="ExpressionField">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#__getattr__" class="md-nav__link">
-    __getattr__
+  <a href="#aggregate-over-collection" class="md-nav__link">
+    Aggregate over collection
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#over-subsets" class="md-nav__link">
+    Over subsets
+  </a>
   
 </li>
       
@@ -600,37 +554,51 @@
               
                 
                 
-                  <h1>Fields</h1>
-                
-                <h2 id="beanieodmfields">beanie.odm.fields</h2>
-<h3 id="indexed">Indexed</h3>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">Indexed</span><span class="p">(</span>
-    <span class="n">typ</span><span class="p">,</span> 
-    <span class="n">index_type</span><span class="o">=</span><span class="n">ASCENDING</span>
+                <h1 id="aggregations">Aggregations</h1>
+<p><a href="/api/queries/#aggregationquery">AggregationQuery</a> is used to aggregate data
+over the whole collection or the subset selected
+with the <a href="/api/queries/#findmany">FindMany</a> query.</p>
+<h2 id="preset-aggregations">Preset aggregations</h2>
+<p><a href="/api/interfaces/#aggregatemethods">AggregateMethods</a> is a list of preset
+aggregations, which simplifies some use cases.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Sample</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>
+    <span class="n">category</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">price</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">count</span><span class="p">:</span> <span class="nb">int</span>
+
+
+<span class="n">sum_count</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Document</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">Sample</span><span class="o">.</span><span class="n">price</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">Sample</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>
+
+<span class="c1"># Or for the whole collection:</span>
+
+<span class="n">sum_count</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Document</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">Sample</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="aggregate-over-collection">Aggregate over collection</h2>
+<p>As FindMany query it implements async generator pattern - aggregation result
+are available via async loop</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">class</span> <span class="nc">OutputItem</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;_id&quot;</span><span class="p">)</span>
+    <span class="n">total</span><span class="p">:</span> <span class="nb">int</span>
+
+
+<span class="k">async</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">Sample</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+        <span class="p">[{</span><span class="s2">&quot;$group&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;$category&quot;</span><span class="p">,</span> <span class="s2">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;$sum&quot;</span><span class="p">:</span> <span class="s2">&quot;$count&quot;</span><span class="p">}}}],</span>
+        <span class="n">aggregation_model</span><span class="o">=</span><span class="n">OutputItem</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="o">...</span>
+</code></pre></div>
+<p>or with <code>to_list</code> method:</p>
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Sample</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+    <span class="p">[{</span><span class="s2">&quot;$group&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;$category&quot;</span><span class="p">,</span> <span class="s2">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;$sum&quot;</span><span class="p">:</span> <span class="s2">&quot;$count&quot;</span><span class="p">}}}]</span>
 <span class="p">)</span>
 </code></pre></div>
-<p>Returns a subclass of <code>typ</code> with an extra attribute <code>_indexed</code> et to True.
-When instantiated the type of the result will actually be <code>typ</code>.</p>
-<h2 id="pydanticobjectid">PydanticObjectId</h2>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">PydanticObjectId</span><span class="p">(</span><span class="n">ObjectId</span><span class="p">)</span>
-</code></pre></div>
-<p>Object Id field. Compatible with Pydantic.</p>
-<h2 id="expressionfield">ExpressionField</h2>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ExpressionField</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="__getattr__">__getattr__</h3>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span>
-    <span class="bp">self</span><span class="p">,</span> 
-    <span class="n">item</span>
+<p>If the <code>aggregation_model</code> parameter is not set, it will return dicts.</p>
+<h2 id="over-subsets">Over subsets</h2>
+<p>To aggregate over a specific subset, FindQuery could be used.</p>
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Sample</span><span class="o">.</span><span class="n">fin</span><span class="p">(</span><span class="n">Sample</span><span class="o">.</span><span class="n">price</span><span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+    <span class="p">[{</span><span class="s2">&quot;$group&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;$category&quot;</span><span class="p">,</span> <span class="s2">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;$sum&quot;</span><span class="p">:</span> <span class="s2">&quot;$count&quot;</span><span class="p">}}}]</span>
 <span class="p">)</span>
 </code></pre></div>
-<p>Get sub field</p>
-<p><strong>Arguments</strong>:</p>
-<ul>
-<li><code>item</code>: name of the subfield</li>
-</ul>
-<p><strong>Returns</strong>:</p>
-<p>ExpressionField</p>
                 
               
               
@@ -649,7 +617,7 @@ When instantiated the type of the result will actually be <code>typ</code>.</p>
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../operators/update/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../delete/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -658,19 +626,19 @@ When instantiated the type of the result will actually be <code>typ</code>.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Update
+              Delete
             </div>
           </div>
         </a>
       
       
-        <a href="../../migrations/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../../api/document/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Migrations
+              Document
             </div>
           </div>
           <div class="md-footer__button md-icon">

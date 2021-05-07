@@ -1,0 +1,994 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.2">
+    
+    
+      
+        <title>Interfaces - Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f955dcd.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#beanieodminterfacesupdate" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Interfaces
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introdution
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Tutorial
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/install/" class="md-nav__link">
+        Install and set up
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/insert/" class="md-nav__link">
+        Insert
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/find/" class="md-nav__link">
+        Find
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/update/" class="md-nav__link">
+        Update
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/delete/" class="md-nav__link">
+        Delete
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/aggregate/" class="md-nav__link">
+        Aggregate
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Api
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Api" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Api
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../document/" class="md-nav__link">
+        Document
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../queries/" class="md-nav__link">
+        Query
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Interfaces
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Interfaces
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#beanieodminterfacesupdate" class="md-nav__link">
+    beanie.odm.interfaces.update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updatemethods" class="md-nav__link">
+    UpdateMethods
+  </a>
+  
+    <nav class="md-nav" aria-label="UpdateMethods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current_date" class="md-nav__link">
+    current_date
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inc" class="md-nav__link">
+    inc
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beanieodminterfacesaggregate" class="md-nav__link">
+    beanie.odm.interfaces.aggregate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aggregatemethods" class="md-nav__link">
+    AggregateMethods
+  </a>
+  
+    <nav class="md-nav" aria-label="AggregateMethods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sum" class="md-nav__link">
+    sum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avg" class="md-nav__link">
+    avg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max" class="md-nav__link">
+    max
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min" class="md-nav__link">
+    min
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beanieodminterfacessession" class="md-nav__link">
+    beanie.odm.interfaces.session
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sessionmethods" class="md-nav__link">
+    SessionMethods
+  </a>
+  
+    <nav class="md-nav" aria-label="SessionMethods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set_session" class="md-nav__link">
+    set_session
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Operators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Operators" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Operators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operators/find/" class="md-nav__link">
+        Find
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operators/update/" class="md-nav__link">
+        Update
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fields/" class="md-nav__link">
+        Fields
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrations/" class="md-nav__link">
+        Migrations
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#beanieodminterfacesupdate" class="md-nav__link">
+    beanie.odm.interfaces.update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updatemethods" class="md-nav__link">
+    UpdateMethods
+  </a>
+  
+    <nav class="md-nav" aria-label="UpdateMethods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current_date" class="md-nav__link">
+    current_date
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inc" class="md-nav__link">
+    inc
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beanieodminterfacesaggregate" class="md-nav__link">
+    beanie.odm.interfaces.aggregate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aggregatemethods" class="md-nav__link">
+    AggregateMethods
+  </a>
+  
+    <nav class="md-nav" aria-label="AggregateMethods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sum" class="md-nav__link">
+    sum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avg" class="md-nav__link">
+    avg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max" class="md-nav__link">
+    max
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min" class="md-nav__link">
+    min
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beanieodminterfacessession" class="md-nav__link">
+    beanie.odm.interfaces.session
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sessionmethods" class="md-nav__link">
+    SessionMethods
+  </a>
+  
+    <nav class="md-nav" aria-label="SessionMethods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set_session" class="md-nav__link">
+    set_session
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Interfaces</h1>
+                
+                <h2 id="beanieodminterfacesupdate">beanie.odm.interfaces.update</h2>
+<h2 id="updatemethods">UpdateMethods</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">UpdateMethods</span><span class="p">()</span>
+</code></pre></div>
+<p>Update methods</p>
+<h3 id="set">set</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">set</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="n">expression</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">ExpressionField</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">Any</span><span class="p">],</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Set values</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Sample</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>
+    <span class="n">one</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="k">await</span> <span class="n">Document</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">Sample</span><span class="o">.</span><span class="n">one</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">set</span><span class="p">({</span><span class="n">Sample</span><span class="o">.</span><span class="n">one</span><span class="p">:</span> <span class="mi">100</span><span class="p">})</span>
+</code></pre></div>
+<p>Uses <a href="/api/operators/update/#set">Set operator</a></p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>expression</code>: Dict[Union[ExpressionField, str], Any] - keys and
+values to set</li>
+<li><code>session</code>: Optional[ClientSession] - pymongo session</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>self</p>
+<h3 id="current_date">current_date</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">current_date</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="n">expression</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">ExpressionField</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">Any</span><span class="p">],</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Set current date</p>
+<p>Uses <a href="/api/operators/update/#currentdate">CurrentDate operator</a></p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>expression</code>: Dict[Union[ExpressionField, str], Any]</li>
+<li><code>session</code>: Optional[ClientSession] - pymongo session</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>self</p>
+<h3 id="inc">inc</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">inc</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="n">expression</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">ExpressionField</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">Any</span><span class="p">],</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Increment</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Sample</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>
+    <span class="n">one</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="k">await</span> <span class="n">Document</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">Sample</span><span class="o">.</span><span class="n">one</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">inc</span><span class="p">({</span><span class="n">Sample</span><span class="o">.</span><span class="n">one</span><span class="p">:</span> <span class="mi">100</span><span class="p">})</span>
+</code></pre></div>
+<p>Uses <a href="/api/operators/update/#inc">Inc operator</a></p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>expression</code>: Dict[Union[ExpressionField, str], Any]</li>
+<li><code>session</code>: Optional[ClientSession] - pymongo session</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>self</p>
+<h2 id="beanieodminterfacesaggregate">beanie.odm.interfaces.aggregate</h2>
+<h2 id="aggregatemethods">AggregateMethods</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">AggregateMethods</span><span class="p">()</span>
+</code></pre></div>
+<p>Aggregate methods</p>
+<h3 id="sum">sum</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">sum</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="n">field</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ExpressionField</span><span class="p">],</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span>
+</code></pre></div>
+<p>Sum of values of the given field</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Sample</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>
+    <span class="n">price</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">count</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="n">sum_count</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Document</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">Sample</span><span class="o">.</span><span class="n">price</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">Sample</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>field</code>: Union[str, ExpressionField]</li>
+<li><code>session</code>: Optional[ClientSession] - pymongo session</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>float - sum</p>
+<h3 id="avg">avg</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">avg</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="n">field</span><span class="p">,</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span>
+</code></pre></div>
+<p>Average of values of the given field</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Sample</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>
+    <span class="n">price</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">count</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="n">avg_count</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Document</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">Sample</span><span class="o">.</span><span class="n">price</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">avg</span><span class="p">(</span><span class="n">Sample</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>field</code>: Union[str, ExpressionField]</li>
+<li><code>session</code>: Optional[ClientSession] - pymongo session</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>float - avg</p>
+<h3 id="max">max</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">max</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="n">field</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ExpressionField</span><span class="p">],</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span>
+</code></pre></div>
+<p>Max of the values of the given field</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Sample</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>
+    <span class="n">price</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">count</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="n">max_count</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Document</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">Sample</span><span class="o">.</span><span class="n">price</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">Sample</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>field</code>: Union[str, ExpressionField]</li>
+<li><code>session</code>: Optional[ClientSession] - pymongo session</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>float - max</p>
+<h3 id="min">min</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">min</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="n">field</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ExpressionField</span><span class="p">],</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span>
+</code></pre></div>
+<p>Min of the values of the given field</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Sample</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>
+    <span class="n">price</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">count</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="n">min_count</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Document</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">Sample</span><span class="o">.</span><span class="n">price</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">Sample</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>field</code>: Union[str, ExpressionField]</li>
+<li><code>session</code>: Optional[ClientSession] - pymongo session</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>float - max</p>
+<h2 id="beanieodminterfacessession">beanie.odm.interfaces.session</h2>
+<h2 id="sessionmethods">SessionMethods</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">SessionMethods</span><span class="p">()</span>
+</code></pre></div>
+<p>Session methods</p>
+<h3 id="set_session">set_session</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">set_session</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Set pymongo session</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>session</code>: Optional[ClientSession] - pymongo session</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../queries/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Query
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../operators/find/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Find
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      
+    
+  </body>
+</html>

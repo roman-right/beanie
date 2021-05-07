@@ -1,0 +1,1677 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.2">
+    
+    
+      
+        <title>Query - Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f955dcd.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#beanieodmqueriesfind" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Query
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introdution
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Tutorial
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/install/" class="md-nav__link">
+        Install and set up
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/insert/" class="md-nav__link">
+        Insert
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/find/" class="md-nav__link">
+        Find
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/update/" class="md-nav__link">
+        Update
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/delete/" class="md-nav__link">
+        Delete
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorial/aggregate/" class="md-nav__link">
+        Aggregate
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Api
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Api" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Api
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../document/" class="md-nav__link">
+        Document
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Query
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Query
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#beanieodmqueriesfind" class="md-nav__link">
+    beanie.odm.queries.find
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#findquery" class="md-nav__link">
+    FindQuery
+  </a>
+  
+    <nav class="md-nav" aria-label="FindQuery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project" class="md-nav__link">
+    project
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#findmany" class="md-nav__link">
+    FindMany
+  </a>
+  
+    <nav class="md-nav" aria-label="FindMany">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#find_many" class="md-nav__link">
+    find_many
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find" class="md-nav__link">
+    find
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sort" class="md-nav__link">
+    sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skip" class="md-nav__link">
+    skip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limit" class="md-nav__link">
+    limit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_many" class="md-nav__link">
+    update_many
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_many" class="md-nav__link">
+    delete_many
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count" class="md-nav__link">
+    count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggregate" class="md-nav__link">
+    aggregate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#findone" class="md-nav__link">
+    FindOne
+  </a>
+  
+    <nav class="md-nav" aria-label="FindOne">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#find_one" class="md-nav__link">
+    find_one
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_one" class="md-nav__link">
+    update_one
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_one" class="md-nav__link">
+    delete_one
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replace_one" class="md-nav__link">
+    replace_one
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__await__" class="md-nav__link">
+    __await__
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beanieodmqueriesupdate" class="md-nav__link">
+    beanie.odm.queries.update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updatequery" class="md-nav__link">
+    UpdateQuery
+  </a>
+  
+    <nav class="md-nav" aria-label="UpdateQuery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update_1" class="md-nav__link">
+    update
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updatemany" class="md-nav__link">
+    UpdateMany
+  </a>
+  
+    <nav class="md-nav" aria-label="UpdateMany">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update_many_1" class="md-nav__link">
+    update_many
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__await___1" class="md-nav__link">
+    __await__
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updateone" class="md-nav__link">
+    UpdateOne
+  </a>
+  
+    <nav class="md-nav" aria-label="UpdateOne">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update_one_1" class="md-nav__link">
+    update_one
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__await___2" class="md-nav__link">
+    __await__
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beanieodmqueriesdelete" class="md-nav__link">
+    beanie.odm.queries.delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deletequery" class="md-nav__link">
+    DeleteQuery
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deletemany" class="md-nav__link">
+    DeleteMany
+  </a>
+  
+    <nav class="md-nav" aria-label="DeleteMany">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#__await___3" class="md-nav__link">
+    __await__
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleteone" class="md-nav__link">
+    DeleteOne
+  </a>
+  
+    <nav class="md-nav" aria-label="DeleteOne">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#__await___4" class="md-nav__link">
+    __await__
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beanieodmqueriesaggregation" class="md-nav__link">
+    beanie.odm.queries.aggregation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aggregationquery" class="md-nav__link">
+    AggregationQuery
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beanieodmqueriescursor" class="md-nav__link">
+    beanie.odm.queries.cursor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basecursorquery" class="md-nav__link">
+    BaseCursorQuery
+  </a>
+  
+    <nav class="md-nav" aria-label="BaseCursorQuery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to_list" class="md-nav__link">
+    to_list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interfaces/" class="md-nav__link">
+        Interfaces
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Operators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Operators" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Operators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operators/find/" class="md-nav__link">
+        Find
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../operators/update/" class="md-nav__link">
+        Update
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fields/" class="md-nav__link">
+        Fields
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrations/" class="md-nav__link">
+        Migrations
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#beanieodmqueriesfind" class="md-nav__link">
+    beanie.odm.queries.find
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#findquery" class="md-nav__link">
+    FindQuery
+  </a>
+  
+    <nav class="md-nav" aria-label="FindQuery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project" class="md-nav__link">
+    project
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#findmany" class="md-nav__link">
+    FindMany
+  </a>
+  
+    <nav class="md-nav" aria-label="FindMany">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#find_many" class="md-nav__link">
+    find_many
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find" class="md-nav__link">
+    find
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sort" class="md-nav__link">
+    sort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skip" class="md-nav__link">
+    skip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limit" class="md-nav__link">
+    limit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_many" class="md-nav__link">
+    update_many
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_many" class="md-nav__link">
+    delete_many
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count" class="md-nav__link">
+    count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggregate" class="md-nav__link">
+    aggregate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#findone" class="md-nav__link">
+    FindOne
+  </a>
+  
+    <nav class="md-nav" aria-label="FindOne">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#find_one" class="md-nav__link">
+    find_one
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update_one" class="md-nav__link">
+    update_one
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete_one" class="md-nav__link">
+    delete_one
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replace_one" class="md-nav__link">
+    replace_one
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__await__" class="md-nav__link">
+    __await__
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beanieodmqueriesupdate" class="md-nav__link">
+    beanie.odm.queries.update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updatequery" class="md-nav__link">
+    UpdateQuery
+  </a>
+  
+    <nav class="md-nav" aria-label="UpdateQuery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update_1" class="md-nav__link">
+    update
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updatemany" class="md-nav__link">
+    UpdateMany
+  </a>
+  
+    <nav class="md-nav" aria-label="UpdateMany">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update_many_1" class="md-nav__link">
+    update_many
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__await___1" class="md-nav__link">
+    __await__
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updateone" class="md-nav__link">
+    UpdateOne
+  </a>
+  
+    <nav class="md-nav" aria-label="UpdateOne">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update_one_1" class="md-nav__link">
+    update_one
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__await___2" class="md-nav__link">
+    __await__
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beanieodmqueriesdelete" class="md-nav__link">
+    beanie.odm.queries.delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deletequery" class="md-nav__link">
+    DeleteQuery
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deletemany" class="md-nav__link">
+    DeleteMany
+  </a>
+  
+    <nav class="md-nav" aria-label="DeleteMany">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#__await___3" class="md-nav__link">
+    __await__
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleteone" class="md-nav__link">
+    DeleteOne
+  </a>
+  
+    <nav class="md-nav" aria-label="DeleteOne">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#__await___4" class="md-nav__link">
+    __await__
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beanieodmqueriesaggregation" class="md-nav__link">
+    beanie.odm.queries.aggregation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aggregationquery" class="md-nav__link">
+    AggregationQuery
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beanieodmqueriescursor" class="md-nav__link">
+    beanie.odm.queries.cursor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basecursorquery" class="md-nav__link">
+    BaseCursorQuery
+  </a>
+  
+    <nav class="md-nav" aria-label="BaseCursorQuery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to_list" class="md-nav__link">
+    to_list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Query</h1>
+                
+                <h2 id="beanieodmqueriesfind">beanie.odm.queries.find</h2>
+<h2 id="findquery">FindQuery</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">FindQuery</span><span class="p">(</span><span class="n">UpdateMethods</span><span class="p">,</span>  <span class="n">SessionMethods</span><span class="p">)</span>
+</code></pre></div>
+<p>Find Query base class</p>
+<p>Inherited from:</p>
+<ul>
+<li><a href="/api/interfaces/#sessionmethods">SessionMethods</a></li>
+<li><a href="/api/interfaces/#aggregatemethods">UpdateMethods</a></li>
+</ul>
+<h3 id="update">update</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">update</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">dict</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">],</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Create Update with modifications query
+and provide search criteria there</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>args</code>: *Union[dict, Mapping] - the modifications to apply.</li>
+<li><code>session</code>: Optional[ClientSession]</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>UpdateMany query</p>
+<h3 id="delete">delete</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">delete</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">DeleteOne</span><span class="p">,</span> <span class="n">DeleteMany</span><span class="p">]</span>
+</code></pre></div>
+<p>Provide search criteria to the Delete query</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>session</code>: Optional[ClientSession]</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>Union[DeleteOne, DeleteMany]</p>
+<h3 id="project">project</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">project</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="n">projection_model</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">]]</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Apply projection parameter</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>projection_model</code>: Optional[Type[BaseModel]] - projection model</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>self</p>
+<h2 id="findmany">FindMany</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">FindMany</span><span class="p">(</span><span class="n">BaseCursorQuery</span><span class="p">,</span>  <span class="n">FindQuery</span><span class="p">,</span>  <span class="n">AggregateMethods</span><span class="p">)</span>
+</code></pre></div>
+<p>Find Many query class</p>
+<p>Inherited from:</p>
+<ul>
+<li><a href="/api/queries/#findquery">FindQuery</a></li>
+<li><a href="/api/queries/#basecursorquery">BaseCursorQuery</a> - async generator</li>
+<li><a href="/api/interfaces/#aggregatemethods">AggregateMethods</a></li>
+</ul>
+<h3 id="find_many">find_many</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">find_many</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="o">*</span><span class="n">args</span><span class="p">,</span> 
+    <span class="n">skip</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> 
+    <span class="n">limit</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> 
+    <span class="n">sort</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">SortDirection</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> 
+    <span class="n">projection_model</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Find many documents by criteria</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>args</code>: *Union[dict, Mapping] - search criteria</li>
+<li><code>skip</code>: Optional[int] - The number of documents to omit.</li>
+<li><code>limit</code>: Optional[int] - The maximum number of results to return.</li>
+<li><code>sort</code>: Union[None, str, List[Tuple[str, SortDirection]]] - A key
+or a list of (key, direction) pairs specifying the sort order
+for this query.</li>
+<li><code>projection_model</code>: Optional[Type[BaseModel]] - projection model</li>
+<li><code>session</code>: Optional[ClientSession] - pymongo session</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>FindMany - query instance</p>
+<h3 id="find">find</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">find</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="o">*</span><span class="n">args</span><span class="p">,</span> 
+    <span class="n">skip</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> 
+    <span class="n">limit</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> 
+    <span class="n">sort</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">SortDirection</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> 
+    <span class="n">projection_model</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>The same as <code>find_many(...)</code></p>
+<h3 id="sort">sort</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">sort</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="o">*</span><span class="n">args</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Add sort parameters</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>args</code>: A key or a list of (key, direction) pairs specifying
+the sort order for this query.</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>self</p>
+<h3 id="skip">skip</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">skip</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="n">n</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Set skip parameter</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>n</code>: int</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>self</p>
+<h3 id="limit">limit</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">limit</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="n">n</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Set limit parameter</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>n</code>: int</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<h3 id="update_many">update_many</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">update_many</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">dict</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">],</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">UpdateMany</span>
+</code></pre></div>
+<p>Provide search criteria to the
+<a href="/api/queries/#updatemany">UpdateMany</a> query</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>args</code>: *Union[dict, Mapping] - the modifications to apply.</li>
+<li><code>session</code>: Optional[ClientSession]</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="/api/queries/#updatemany">UpdateMany</a> query</p>
+<h3 id="delete_many">delete_many</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">delete_many</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DeleteMany</span>
+</code></pre></div>
+<p>Provide search criteria to the <a href="/api/queries/#deletemany">DeleteMany</a> query</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>session</code>: </li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="/api/queries/#deletemany">DeleteMany</a> query</p>
+<h3 id="count">count</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">count</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span>
+</code></pre></div>
+<p>Number of found documents</p>
+<p><strong>Returns</strong>:</p>
+<p>int</p>
+<h3 id="aggregate">aggregate</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">aggregate</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="n">aggregation_pipeline</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> 
+    <span class="n">projection_model</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AggregationQuery</span>
+</code></pre></div>
+<p>Provide search criteria to the <a href="/api/queries/#aggregationquery">AggregationQuery</a></p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>aggregation_pipeline</code>: list - aggregation pipeline. MongoDB doc:
+<a href="https://docs.mongodb.com/manual/core/aggregation-pipeline/">https://docs.mongodb.com/manual/core/aggregation-pipeline/</a></li>
+<li><code>projection_model</code>: Type[BaseModel] - Projection Model</li>
+<li><code>session</code>: Optional[ClientSession] - PyMongo session</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="/api/queries/#aggregationquery">AggregationQuery</a></p>
+<h2 id="findone">FindOne</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">FindOne</span><span class="p">(</span><span class="n">FindQuery</span><span class="p">)</span>
+</code></pre></div>
+<p>Find One query class</p>
+<p>Inherited from:</p>
+<ul>
+<li><a href="/api/queries/#findquery">FindQuery</a></li>
+</ul>
+<h3 id="find_one">find_one</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">find_one</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="o">*</span><span class="n">args</span><span class="p">,</span> 
+    <span class="n">projection_model</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Find one document by criteria</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>args</code>: *Union[dict, Mapping] - search criteria</li>
+<li><code>projection_model</code>: Optional[Type[BaseModel]] - projection model</li>
+<li><code>session</code>: Optional[ClientSession] - pymongo session</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>FindOne - query instance</p>
+<h3 id="update_one">update_one</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">update_one</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="o">*</span><span class="n">args</span><span class="p">,</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">UpdateOne</span>
+</code></pre></div>
+<p>Create <a href="/api/queries/#updateone">UpdateOne</a> query using modifications and
+provide search criteria there</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>args</code>: *Union[dict, Mapping] - the modifications to apply</li>
+<li><code>session</code>: Optional[ClientSession] - PyMongo sessions</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="/api/queries/#updateone">UpdateOne</a> query</p>
+<h3 id="delete_one">delete_one</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">delete_one</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DeleteOne</span>
+</code></pre></div>
+<p>Provide search criteria to the <a href="/api/queries/#deleteone">DeleteOne</a> query</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>session</code>: Optional[ClientSession] - PyMongo sessions</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p><a href="/api/queries/#deleteone">DeleteOne</a> query</p>
+<h3 id="replace_one">replace_one</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">replace_one</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="n">document</span><span class="p">,</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">UpdateResult</span>
+</code></pre></div>
+<p>Replace found document by provided</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>document</code>: Document - document, which will replace the found one</li>
+<li><code>session</code>: Optional[ClientSession] - PyMongo session</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>UpdateResult</p>
+<h3 id="__await__">__await__</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__await__</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Run the query</p>
+<p><strong>Returns</strong>:</p>
+<p>Document</p>
+<h2 id="beanieodmqueriesupdate">beanie.odm.queries.update</h2>
+<h2 id="updatequery">UpdateQuery</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">UpdateQuery</span><span class="p">(</span><span class="n">UpdateMethods</span><span class="p">,</span>  <span class="n">SessionMethods</span><span class="p">)</span>
+</code></pre></div>
+<p>Update Query base class</p>
+<p>Inherited from:</p>
+<ul>
+<li><a href="/api/interfaces/#sessionmethods">SessionMethods</a></li>
+<li><a href="/api/interfaces/#aggregatemethods">UpdateMethods</a></li>
+</ul>
+<h3 id="update_1">update</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">update</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">dict</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">],</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Provide modifications to the update query. The same as <code>update()</code></p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>args</code>: *Union[dict, Mapping] - the modifications to apply.</li>
+<li><code>session</code>: Optional[ClientSession]</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>UpdateMany query</p>
+<h2 id="updatemany">UpdateMany</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">UpdateMany</span><span class="p">(</span><span class="n">UpdateQuery</span><span class="p">)</span>
+</code></pre></div>
+<p>Update Many query class</p>
+<p>Inherited from:</p>
+<ul>
+<li><a href="/api/queries/#updatequery">UpdateQuery</a></li>
+</ul>
+<h3 id="update_many_1">update_many</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">update_many</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="o">*</span><span class="n">args</span><span class="p">,</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Provide modifications to the update query</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>args</code>: *Union[dict, Mapping] - the modifications to apply.</li>
+<li><code>session</code>: Optional[ClientSession]</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>UpdateMany query</p>
+<h3 id="__await___1">__await__</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__await__</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Run the query</p>
+<p><strong>Returns</strong>:</p>
+<h2 id="updateone">UpdateOne</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">UpdateOne</span><span class="p">(</span><span class="n">UpdateQuery</span><span class="p">)</span>
+</code></pre></div>
+<p>Update One query class</p>
+<p>Inherited from:</p>
+<ul>
+<li><a href="/api/queries/#updatequery">UpdateQuery</a></li>
+</ul>
+<h3 id="update_one_1">update_one</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">update_one</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="o">*</span><span class="n">args</span><span class="p">,</span> 
+    <span class="n">session</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ClientSession</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Provide modifications to the update query. The same as <code>update()</code></p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>args</code>: *Union[dict, Mapping] - the modifications to apply.</li>
+<li><code>session</code>: Optional[ClientSession]</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>UpdateMany query</p>
+<h3 id="__await___2">__await__</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__await__</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Run the query</p>
+<p><strong>Returns</strong>:</p>
+<h2 id="beanieodmqueriesdelete">beanie.odm.queries.delete</h2>
+<h2 id="deletequery">DeleteQuery</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">DeleteQuery</span><span class="p">(</span><span class="n">SessionMethods</span><span class="p">)</span>
+</code></pre></div>
+<p>Deletion Query</p>
+<h2 id="deletemany">DeleteMany</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">DeleteMany</span><span class="p">(</span><span class="n">DeleteQuery</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="__await___3">__await__</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__await__</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Run the query</p>
+<p><strong>Returns</strong>:</p>
+<h2 id="deleteone">DeleteOne</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">DeleteOne</span><span class="p">(</span><span class="n">DeleteQuery</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="__await___4">__await__</h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__await__</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Run the query</p>
+<p><strong>Returns</strong>:</p>
+<h2 id="beanieodmqueriesaggregation">beanie.odm.queries.aggregation</h2>
+<h2 id="aggregationquery">AggregationQuery</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">AggregationQuery</span><span class="p">(</span><span class="n">BaseCursorQuery</span><span class="p">,</span>  <span class="n">SessionMethods</span><span class="p">)</span>
+</code></pre></div>
+<p>Aggregation Query</p>
+<p>Inherited from:</p>
+<ul>
+<li><a href="/api/interfaces/#sessionmethods">SessionMethods</a> - session methods</li>
+<li><a href="/api/queries/#basecursorquery">BaseCursorQuery</a> - async generator</li>
+</ul>
+<h2 id="beanieodmqueriescursor">beanie.odm.queries.cursor</h2>
+<h2 id="basecursorquery">BaseCursorQuery</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">BaseCursorQuery</span><span class="p">()</span>
+</code></pre></div>
+<p>BaseCursorQuery class. Wrapper over AsyncIOMotorCursor,
+which parse result with model</p>
+<h3 id="to_list">to_list</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">to_list</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> 
+    <span class="n">length</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="s2">&quot;Document&quot;</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="nb">dict</span><span class="p">]]</span>
+</code></pre></div>
+<p>Get list of documents</p>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>length</code>: Optional[int] - length of the list</li>
+</ul>
+<p><strong>Returns</strong>:</p>
+<p>Union[List["Document"], List[dict]]</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../document/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Document
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../interfaces/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Interfaces
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      
+    
+  </body>
+</html>

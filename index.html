@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#100-beta-1-is-out" class="md-skip">
+        <a href="#getting-started-with-beanie" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Introdution
             
           </span>
         </div>
@@ -177,14 +177,16 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Home
+          Introdution
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="." class="md-nav__link md-nav__link--active">
-        Home
+        Introdution
       </a>
       
         
@@ -192,19 +194,14 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#100-beta-1-is-out" class="md-nav__link">
-    1.0.0 beta 1 is out!
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
@@ -234,57 +231,64 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
-    Quick Start
+  <a href="#basic-example" class="md-nav__link">
+    Basic Example
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
-    Documentation
-  </a>
-  
-    <nav class="md-nav" aria-label="Documentation">
+    <nav class="md-nav" aria-label="Basic Example">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#odm" class="md-nav__link">
-    ODM
+  <a href="#document-models" class="md-nav__link">
+    Document models
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#migrations" class="md-nav__link">
-    Migrations
+  <a href="#initialization" class="md-nav__link">
+    Initialization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create" class="md-nav__link">
+    Create
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find" class="md-nav__link">
+    Find
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    Update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    Delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggregate" class="md-nav__link">
+    Aggregate
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-projects" class="md-nav__link">
-    Example Projects
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#articles" class="md-nav__link">
-    Articles
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
-    Resources
-  </a>
   
 </li>
       
@@ -325,8 +329,8 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/odm/" class="md-nav__link">
-        ODM
+      <a href="tutorial/install/" class="md-nav__link">
+        Install and set up
       </a>
     </li>
   
@@ -337,8 +341,56 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/migrations/" class="md-nav__link">
-        Migrations
+      <a href="tutorial/insert/" class="md-nav__link">
+        Insert
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorial/find/" class="md-nav__link">
+        Find
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorial/update/" class="md-nav__link">
+        Update
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorial/delete/" class="md-nav__link">
+        Delete
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorial/aggregate/" class="md-nav__link">
+        Aggregate
       </a>
     </li>
   
@@ -364,13 +416,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       <label class="md-nav__link" for="__nav_3">
-        Documentation
+        Api
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Documentation" data-md-level="1">
+      <nav class="md-nav" aria-label="Api" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Documentation
+          Api
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -379,8 +431,77 @@
   
   
     <li class="md-nav__item">
-      <a href="documentation/odm/" class="md-nav__link">
-        ODM
+      <a href="api/document/" class="md-nav__link">
+        Document
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/queries/" class="md-nav__link">
+        Query
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/interfaces/" class="md-nav__link">
+        Interfaces
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Operators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Operators" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Operators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/operators/find/" class="md-nav__link">
+        Find
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/operators/update/" class="md-nav__link">
+        Update
       </a>
     </li>
   
@@ -388,6 +509,39 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="api/fields/" class="md-nav__link">
+        Fields
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="migrations/" class="md-nav__link">
+        Migrations
+      </a>
     </li>
   
 
@@ -423,19 +577,14 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#100-beta-1-is-out" class="md-nav__link">
-    1.0.0 beta 1 is out!
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
@@ -465,57 +614,64 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
-    Quick Start
+  <a href="#basic-example" class="md-nav__link">
+    Basic Example
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
-    Documentation
-  </a>
-  
-    <nav class="md-nav" aria-label="Documentation">
+    <nav class="md-nav" aria-label="Basic Example">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#odm" class="md-nav__link">
-    ODM
+  <a href="#document-models" class="md-nav__link">
+    Document models
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#migrations" class="md-nav__link">
-    Migrations
+  <a href="#initialization" class="md-nav__link">
+    Initialization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create" class="md-nav__link">
+    Create
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find" class="md-nav__link">
+    Find
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    Update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    Delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggregate" class="md-nav__link">
+    Aggregate
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-projects" class="md-nav__link">
-    Example Projects
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#articles" class="md-nav__link">
-    Articles
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
-    Resources
-  </a>
   
 </li>
       
@@ -532,96 +688,156 @@
               
                 
                 
-                  <h1>Home</h1>
-                
                 <p><a href="https://github.com/roman-right/beanie"><img alt="Beanie" src="https://raw.githubusercontent.com/roman-right/beanie/main/assets/logo/with_text.svg" /></a></p>
-<p><a href="https://github.com/roman-right/beanie">Beanie</a> - is an Asynchronous Python object-document mapper (ODM) for MongoDB, based on <a href="https://motor.readthedocs.io/en/stable/">Motor</a> and <a href="https://pydantic-docs.helpmanual.io/">Pydantic</a>.</p>
-<p>When using Beanie each database collection has a corresponding <code>Document</code> that is used to interact with that collection.
-In addition to retrieving data, Beanie allows you to add, update, or delete documents from the collection as well.</p>
-<p>Beanie saves you time by removing boiler-plate code and it helps you focus on the parts of your app that actually matter.</p>
+<h1 id="getting-started-with-beanie">Getting Started with Beanie</h1>
+<p><a href="https://github.com/roman-right/beanie">Beanie</a> - is an Asynchronous Python
+object-document mapper (ODM) for MongoDB</p>
+<p>When using Beanie each database collection has a corresponding <code>Document</code> that
+is used to interact with that collection. In addition to retrieving data,
+Beanie allows you to add, update, or delete documents from the collection as
+well.</p>
+<p>Beanie saves you time by removing boiler-plate code and it helps you focus on
+the parts of your app that actually matter.</p>
 <p>Data and schema migrations are supported by Beanie out of the box.</p>
-<h3 id="100-beta-1-is-out">1.0.0 beta 1 is out!</h3>
-<p>Documentation for the beta release is available here - <a href="https://roman-right.github.io/beanie_docs_beta/">https://roman-right.github.io/beanie_docs_beta/</a></p>
-<p>It supports:</p>
-<ul>
-<li>find-, update, delete- and aggregation query builders</li>
-<li>projections</li>
-<li>preset update and aggregation methods</li>
-</ul>
-<p>And many other things.</p>
-<p>To install beta:
+<h2 id="installation">Installation</h2>
+<h3 id="pip">PIP</h3>
 <div class="highlight"><pre><span></span><code>pip install <span class="nv">beanie</span><span class="o">==</span><span class="m">1</span>.0.0b1
 </code></pre></div>
-OR
+<h3 id="poetry">Poetry</h3>
 <div class="highlight"><pre><span></span><code>poetry add <span class="nv">beanie</span><span class="o">==</span><span class="m">1</span>.0.0b1
-</code></pre></div></p>
-<h3 id="installation">Installation</h3>
-<h4 id="pip">PIP</h4>
-<div class="highlight"><pre><span></span><code>pip install beanie
 </code></pre></div>
-<h4 id="poetry">Poetry</h4>
-<div class="highlight"><pre><span></span><code>poetry add beanie
-</code></pre></div>
-<h3 id="quick-start">Quick Start</h3>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">List</span>
-
-<span class="kn">import</span> <span class="nn">motor</span>
-<span class="kn">from</span> <span class="nn">beanie</span> <span class="kn">import</span> <span class="n">Document</span><span class="p">,</span> <span class="n">init_beanie</span>
+<h2 id="basic-example">Basic Example</h2>
+<h3 id="document-models">Document models</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
 <span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+<span class="kn">from</span> <span class="nn">beanie</span> <span class="kn">import</span> <span class="n">Document</span><span class="p">,</span> <span class="n">Indexed</span>
 
 
-<span class="k">class</span> <span class="nc">Tag</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">Category</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
     <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
-    <span class="n">color</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span>
 
 
-<span class="k">class</span> <span class="nc">Note</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>
-    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span>
-    <span class="n">text</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
-    <span class="n">tag_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Tag</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">class</span> <span class="nc">Product</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>  <span class="c1"># This is the model</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">description</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">price</span><span class="p">:</span> <span class="n">Indexed</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+    <span class="n">category</span><span class="p">:</span> <span class="n">Category</span>
+
+    <span class="k">class</span> <span class="nc">Collection</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;products&quot;</span>
+</code></pre></div>
+<p>More details about Documents, collections, and indexes configuration could be found in the <a href="/tutorial/install/">tutorial</a>.</p>
+<h3 id="initialization">Initialization</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">motor</span>
+<span class="kn">from</span> <span class="nn">beanie</span> <span class="kn">import</span> <span class="n">init_beanie</span>
 
 
-<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">init</span><span class="p">():</span>
     <span class="c1"># Crete Motor client</span>
     <span class="n">client</span> <span class="o">=</span> <span class="n">motor</span><span class="o">.</span><span class="n">motor_asyncio</span><span class="o">.</span><span class="n">AsyncIOMotorClient</span><span class="p">(</span>
         <span class="s2">&quot;mongodb://user:pass@host:27017&quot;</span>
     <span class="p">)</span>
 
     <span class="c1"># Init beanie with the Note document class</span>
-    <span class="k">await</span> <span class="n">init_beanie</span><span class="p">(</span><span class="n">database</span><span class="o">=</span><span class="n">client</span><span class="o">.</span><span class="n">db_name</span><span class="p">,</span> <span class="n">document_models</span><span class="o">=</span><span class="p">[</span><span class="n">Note</span><span class="p">])</span>
-
-    <span class="c1"># Get all the notes</span>
-    <span class="n">all_notes</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Note</span><span class="o">.</span><span class="n">find_all</span><span class="p">()</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+    <span class="k">await</span> <span class="n">init_beanie</span><span class="p">(</span><span class="n">database</span><span class="o">=</span><span class="n">client</span><span class="o">.</span><span class="n">db_name</span><span class="p">,</span> <span class="n">document_models</span><span class="o">=</span><span class="p">[</span><span class="n">Product</span><span class="p">])</span>
 </code></pre></div>
-<h3 id="documentation">Documentation</h3>
-<h4 id="odm">ODM</h4>
-<ul>
-<li><strong><a href="https://roman-right.github.io/beanie/tutorial/odm/">Tutorial</a></strong> - ODM usage examples</li>
-<li><strong><a href="https://roman-right.github.io/beanie/documentation/odm/">API</a></strong> - Full list of the ODM classes and
-  methods with descriptions</li>
-</ul>
-<h4 id="migrations">Migrations</h4>
-<ul>
-<li><strong><a href="https://roman-right.github.io/beanie/tutorial/odm/">Tutorial</a></strong> - Migrations usage examples</li>
-</ul>
-<h3 id="example-projects">Example Projects</h3>
-<ul>
-<li><strong><a href="https://github.com/roman-right/beanie-fastapi-demo">FastAPI Demo</a></strong> - Beanie and FastAPI collaboration demonstration. CRUD and Aggregation.</li>
-<li><strong><a href="https://github.com/roman-right/beanie-index-demo">Indexes Demo</a></strong> - Regular and Geo Indexes usage example wrapped to a microservice. </li>
-</ul>
-<h3 id="articles">Articles</h3>
-<ul>
-<li><strong><a href="https://dev.to/romanright/announcing-beanie-mongodb-odm-56e">Announcing Beanie - MongoDB ODM</a></strong></li>
-<li><strong><a href="https://developer.mongodb.com/article/beanie-odm-fastapi-cocktails/">Build a Cocktail API with Beanie and MongoDB</a></strong></li>
-<li><strong><a href="https://dev.to/romanright/mongodb-indexes-with-beanie-43e8">MongoDB indexes with Beanie</a></strong></li>
-<li><strong><a href="https://dev.to/romanright/beanie-projections-reducing-network-and-database-load-3bih">Beanie Projections. Reducing network and database load.</a></strong></li>
-</ul>
-<h3 id="resources">Resources</h3>
-<ul>
-<li><strong><a href="https://github.com/roman-right/beanie">GitHub</a></strong> - GitHub page of the project</li>
-<li><strong><a href="https://roman-right.github.io/beanie/changelog">Changelog</a></strong> - list of all the valuable changes</li>
-<li><strong><a href="https://discord.gg/ZTTnM7rMaz">Discord</a></strong> - ask your questions, share ideas or just say <code>Hello!!</code></li>
-</ul>
+<h3 id="create">Create</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">create</span><span class="p">():</span>
+    <span class="n">chocolate</span> <span class="o">=</span> <span class="n">Category</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Chocolate&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Single:</span>
+
+    <span class="n">bar</span> <span class="o">=</span> <span class="n">Product</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Tony&#39;s&quot;</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="mf">5.95</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">chocolate</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">bar</span><span class="o">.</span><span class="n">insert</span><span class="p">()</span>
+
+    <span class="c1"># Many</span>
+
+    <span class="n">milka</span> <span class="o">=</span> <span class="n">Product</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Milka&quot;</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="mf">3.05</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">chocolate</span><span class="p">)</span>
+    <span class="n">peanut_bar</span> <span class="o">=</span> <span class="n">Product</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Peanut Bar&quot;</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="mf">4.44</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">chocolate</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">insert_many</span><span class="p">([</span><span class="n">milka</span><span class="p">,</span> <span class="n">peanut_bar</span><span class="p">])</span>
+</code></pre></div>
+<p>Other details and examples could be found in the <a href="/tutorial/insert/">tutorial</a></p>
+<h3 id="find">Find</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">find</span><span class="p">():</span>
+    <span class="c1"># Single</span>
+
+    <span class="c1"># By id</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;608da169eb9e17281f0ab2ff&quot;</span><span class="p">)</span>
+
+    <span class="c1"># By name</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find_one</span><span class="p">(</span><span class="n">Product</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Peanut Bar&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Many</span>
+
+    <span class="c1"># By category</span>
+
+    <span class="n">chocolates</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find</span><span class="p">(</span>
+        <span class="n">Product</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Chocolate&quot;</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+
+    <span class="c1"># And by price</span>
+
+    <span class="n">chocolates</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find</span><span class="p">(</span>
+        <span class="n">Product</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Chocolate&quot;</span><span class="p">,</span>
+        <span class="n">Product</span><span class="o">.</span><span class="n">price</span> <span class="o">&lt;</span> <span class="mi">5</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+
+    <span class="c1"># OR</span>
+
+    <span class="n">chocolates</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find</span><span class="p">(</span>
+        <span class="n">Product</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Chocolate&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find</span><span class="p">(</span>
+        <span class="n">Product</span><span class="o">.</span><span class="n">price</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+
+    <span class="c1"># All</span>
+
+    <span class="n">all_products</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">all</span><span class="p">()</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+</code></pre></div>
+<p>Information about sorting, skips, limits, and projections could be found in the <a href="/tutorial/find/">tutorial</a></p>
+<h3 id="update">Update</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="c1"># Single </span>
+    <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find_one</span><span class="p">(</span><span class="n">Product</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Milka&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">set</span><span class="p">({</span><span class="n">Product</span><span class="o">.</span><span class="n">price</span><span class="p">:</span> <span class="mf">3.33</span><span class="p">})</span>
+
+    <span class="c1"># Or</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find_one</span><span class="p">(</span><span class="n">Product</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Milka&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">bar</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">Set</span><span class="p">({</span><span class="n">Product</span><span class="o">.</span><span class="n">price</span><span class="p">:</span> <span class="mf">3.33</span><span class="p">}))</span>
+
+    <span class="c1"># Or</span>
+    <span class="n">bar</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="mf">3.33</span>
+    <span class="k">await</span> <span class="n">bar</span><span class="o">.</span><span class="n">replace</span><span class="p">()</span>
+
+    <span class="c1"># Many</span>
+    <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find</span><span class="p">(</span>
+        <span class="n">Product</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Chocolate&quot;</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">inc</span><span class="p">({</span><span class="n">Product</span><span class="o">.</span><span class="n">price</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+</code></pre></div>
+<p>More details and examples about update queries could be found in the <a href="/tutorial/update/">tutorial</a></p>
+<h3 id="delete">Delete</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">delete</span><span class="p">():</span>
+    <span class="c1"># Single </span>
+    <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find_one</span><span class="p">(</span><span class="n">Product</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Milka&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+
+    <span class="c1"># Or</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find_one</span><span class="p">(</span><span class="n">Product</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Milka&quot;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">bar</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+
+    <span class="c1"># Many</span>
+    <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find</span><span class="p">(</span>
+        <span class="n">Product</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Chocolate&quot;</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+</code></pre></div>
+<p>More information could be found in the <a href="/tutorial/delete/">tutorial</a></p>
+<h3 id="aggregate">Aggregate</h3>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">aggregate</span><span class="p">():</span>
+    <span class="n">avg_price</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find</span><span class="p">(</span>
+        <span class="n">Product</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Chocolate&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">avg</span><span class="p">(</span><span class="n">Product</span><span class="o">.</span><span class="n">price</span><span class="p">)</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span>
+    <span class="p">[{</span><span class="s2">&quot;$group&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;$category.name&quot;</span><span class="p">,</span> <span class="s2">&quot;total&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;$avg&quot;</span><span class="p">:</span> <span class="s2">&quot;$price&quot;</span><span class="p">}}}]</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>Information about aggregation preset aggregation methods and native syntax aggregations could be found in the <a href="/tutorial/aggregate/">tutorial</a></p>
 <hr />
 <p>Supported by <a href="https://jb.gg/OpenSource">JetBrains</a></p>
 <p><a href="https://jb.gg/OpenSource"><img alt="JetBrains" src="https://raw.githubusercontent.com/roman-right/beanie/main/assets/logo/jetbrains.svg" /></a></p>
@@ -644,13 +860,13 @@ OR
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
       
-        <a href="tutorial/odm/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="tutorial/install/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              ODM
+              Install and set up
             </div>
           </div>
           <div class="md-footer__button md-icon">

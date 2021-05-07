@@ -14,7 +14,7 @@
     
     
       
-        <title>Fields - Documentation</title>
+        <title>Insert - Documentation</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#beanieodmfields" class="md-skip">
+        <a href="#insert-the-documents" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fields
+              Insert
             
           </span>
         </div>
@@ -184,12 +184,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         Tutorial
@@ -207,7 +209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/install/" class="md-nav__link">
+      <a href="../install/" class="md-nav__link">
         Install and set up
       </a>
     </li>
@@ -217,11 +219,58 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../tutorial/insert/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Insert
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Insert
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#insert-single" class="md-nav__link">
+    Insert single
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insert-many" class="md-nav__link">
+    Insert many
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -231,7 +280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/find/" class="md-nav__link">
+      <a href="../find/" class="md-nav__link">
         Find
       </a>
     </li>
@@ -243,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/update/" class="md-nav__link">
+      <a href="../update/" class="md-nav__link">
         Update
       </a>
     </li>
@@ -255,7 +304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/delete/" class="md-nav__link">
+      <a href="../delete/" class="md-nav__link">
         Delete
       </a>
     </li>
@@ -267,7 +316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/aggregate/" class="md-nav__link">
+      <a href="../aggregate/" class="md-nav__link">
         Aggregate
       </a>
     </li>
@@ -286,14 +335,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       <label class="md-nav__link" for="__nav_3">
         Api
@@ -311,7 +358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../document/" class="md-nav__link">
+      <a href="../../api/document/" class="md-nav__link">
         Document
       </a>
     </li>
@@ -323,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../queries/" class="md-nav__link">
+      <a href="../../api/queries/" class="md-nav__link">
         Query
       </a>
     </li>
@@ -335,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../interfaces/" class="md-nav__link">
+      <a href="../../api/interfaces/" class="md-nav__link">
         Interfaces
       </a>
     </li>
@@ -368,7 +415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../operators/find/" class="md-nav__link">
+      <a href="../../api/operators/find/" class="md-nav__link">
         Find
       </a>
     </li>
@@ -380,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../operators/update/" class="md-nav__link">
+      <a href="../../api/operators/update/" class="md-nav__link">
         Update
       </a>
     </li>
@@ -396,87 +443,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Fields
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../api/fields/" class="md-nav__link">
         Fields
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#beanieodmfields" class="md-nav__link">
-    beanie.odm.fields
-  </a>
-  
-    <nav class="md-nav" aria-label="beanie.odm.fields">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#indexed" class="md-nav__link">
-    Indexed
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pydanticobjectid" class="md-nav__link">
-    PydanticObjectId
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#expressionfield" class="md-nav__link">
-    ExpressionField
-  </a>
-  
-    <nav class="md-nav" aria-label="ExpressionField">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#__getattr__" class="md-nav__link">
-    __getattr__
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -533,6 +504,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -541,49 +514,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#beanieodmfields" class="md-nav__link">
-    beanie.odm.fields
-  </a>
-  
-    <nav class="md-nav" aria-label="beanie.odm.fields">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#indexed" class="md-nav__link">
-    Indexed
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pydanticobjectid" class="md-nav__link">
-    PydanticObjectId
+  <a href="#insert-single" class="md-nav__link">
+    Insert single
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#expressionfield" class="md-nav__link">
-    ExpressionField
+  <a href="#insert-many" class="md-nav__link">
+    Insert many
   </a>
-  
-    <nav class="md-nav" aria-label="ExpressionField">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#__getattr__" class="md-nav__link">
-    __getattr__
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -600,37 +540,26 @@
               
                 
                 
-                  <h1>Fields</h1>
-                
-                <h2 id="beanieodmfields">beanie.odm.fields</h2>
-<h3 id="indexed">Indexed</h3>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">Indexed</span><span class="p">(</span>
-    <span class="n">typ</span><span class="p">,</span> 
-    <span class="n">index_type</span><span class="o">=</span><span class="n">ASCENDING</span>
-<span class="p">)</span>
+                <h1 id="insert-the-documents">Insert the documents</h1>
+<h2 id="insert-single">Insert single</h2>
+<p><div class="highlight"><pre><span></span><code><span class="n">chocolate</span> <span class="o">=</span> <span class="n">Category</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Chocolate&quot;</span><span class="p">)</span>
+
+<span class="n">bar</span> <span class="o">=</span> <span class="n">Product</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Tony&#39;s&quot;</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="mf">5.95</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">chocolate</span><span class="p">)</span>
+<span class="k">await</span> <span class="n">bar</span><span class="o">.</span><span class="n">insert</span><span class="p">()</span>
 </code></pre></div>
-<p>Returns a subclass of <code>typ</code> with an extra attribute <code>_indexed</code> et to True.
-When instantiated the type of the result will actually be <code>typ</code>.</p>
-<h2 id="pydanticobjectid">PydanticObjectId</h2>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">PydanticObjectId</span><span class="p">(</span><span class="n">ObjectId</span><span class="p">)</span>
+OR
+<div class="highlight"><pre><span></span><code><span class="n">bar</span> <span class="o">=</span> <span class="n">Product</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Tony&#39;s&quot;</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="mf">5.95</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">chocolate</span><span class="p">)</span>
+<span class="k">await</span> <span class="n">bar</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
 </code></pre></div>
-<p>Object Id field. Compatible with Pydantic.</p>
-<h2 id="expressionfield">ExpressionField</h2>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ExpressionField</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+OR
+<div class="highlight"><pre><span></span><code><span class="n">bar</span> <span class="o">=</span> <span class="n">Product</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Tony&#39;s&quot;</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="mf">5.95</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">chocolate</span><span class="p">)</span>
+<span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">insert_one</span><span class="p">(</span><span class="n">bar</span><span class="p">)</span>
+</code></pre></div></p>
+<h2 id="insert-many">Insert many</h2>
+<div class="highlight"><pre><span></span><code><span class="n">milka</span> <span class="o">=</span> <span class="n">Product</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Milka&quot;</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="mf">3.05</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">chocolate</span><span class="p">)</span>
+<span class="n">peanut_bar</span> <span class="o">=</span> <span class="n">Product</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Peanut Bar&quot;</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="mf">4.44</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">chocolate</span><span class="p">)</span>
+<span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">insert_many</span><span class="p">([</span><span class="n">milka</span><span class="p">,</span> <span class="n">peanut_bar</span><span class="p">])</span>
 </code></pre></div>
-<h3 id="__getattr__">__getattr__</h3>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span>
-    <span class="bp">self</span><span class="p">,</span> 
-    <span class="n">item</span>
-<span class="p">)</span>
-</code></pre></div>
-<p>Get sub field</p>
-<p><strong>Arguments</strong>:</p>
-<ul>
-<li><code>item</code>: name of the subfield</li>
-</ul>
-<p><strong>Returns</strong>:</p>
-<p>ExpressionField</p>
                 
               
               
@@ -649,7 +578,7 @@ When instantiated the type of the result will actually be <code>typ</code>.</p>
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../operators/update/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../install/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -658,19 +587,19 @@ When instantiated the type of the result will actually be <code>typ</code>.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Update
+              Install and set up
             </div>
           </div>
         </a>
       
       
-        <a href="../../migrations/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../find/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Migrations
+              Find
             </div>
           </div>
           <div class="md-footer__button md-icon">

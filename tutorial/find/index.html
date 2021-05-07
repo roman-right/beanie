@@ -1,0 +1,854 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.2">
+    
+    
+      
+        <title>Find - Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f955dcd.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#find-documents" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Find
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introdution
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Tutorial
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/" class="md-nav__link">
+        Install and set up
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insert/" class="md-nav__link">
+        Insert
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Find
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Find
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#search-criteria" class="md-nav__link">
+    Search Criteria
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-one" class="md-nav__link">
+    Find One
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-many" class="md-nav__link">
+    Find Many
+  </a>
+  
+    <nav class="md-nav" aria-label="Find Many">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cursor" class="md-nav__link">
+    Cursor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-of-the-search-criterias" class="md-nav__link">
+    List of the search criterias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chaining" class="md-nav__link">
+    Chaining
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sorting" class="md-nav__link">
+    Sorting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skip-and-limit" class="md-nav__link">
+    Skip and limit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projections" class="md-nav__link">
+    Projections
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update/" class="md-nav__link">
+        Update
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../delete/" class="md-nav__link">
+        Delete
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aggregate/" class="md-nav__link">
+        Aggregate
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Api
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Api" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Api
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/document/" class="md-nav__link">
+        Document
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/queries/" class="md-nav__link">
+        Query
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/interfaces/" class="md-nav__link">
+        Interfaces
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Operators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Operators" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Operators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/operators/find/" class="md-nav__link">
+        Find
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/operators/update/" class="md-nav__link">
+        Update
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/fields/" class="md-nav__link">
+        Fields
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../migrations/" class="md-nav__link">
+        Migrations
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#search-criteria" class="md-nav__link">
+    Search Criteria
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-one" class="md-nav__link">
+    Find One
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-many" class="md-nav__link">
+    Find Many
+  </a>
+  
+    <nav class="md-nav" aria-label="Find Many">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cursor" class="md-nav__link">
+    Cursor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-of-the-search-criterias" class="md-nav__link">
+    List of the search criterias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chaining" class="md-nav__link">
+    Chaining
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sorting" class="md-nav__link">
+    Sorting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skip-and-limit" class="md-nav__link">
+    Skip and limit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projections" class="md-nav__link">
+    Projections
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="find-documents">Find documents</h1>
+<p>Beanie provides two ways to find documents:</p>
+<ul>
+<li>Find One document</li>
+<li>Find Many documents</li>
+</ul>
+<p>On searching for a single document it uses <a href="/api/queries/#findone">FindOne</a>
+query, many documents - <a href="/api/queries/#findmany">FindMany</a> query.</p>
+<p>Next document models will be used for this tutorial:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+<span class="kn">from</span> <span class="nn">beanie</span> <span class="kn">import</span> <span class="n">Document</span>
+
+
+<span class="k">class</span> <span class="nc">Category</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span>
+
+
+<span class="k">class</span> <span class="nc">Product</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>  <span class="c1"># This is the model</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">description</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">price</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">category</span><span class="p">:</span> <span class="n">Category</span>
+
+    <span class="k">class</span> <span class="nc">Collection</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;products&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">ProductShortView</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">price</span><span class="p">:</span> <span class="nb">float</span>
+</code></pre></div>
+<h2 id="search-criteria">Search Criteria</h2>
+<p>As search criteria, Beanie supports python comparison methods, wrappers over
+find query operators, and native syntax.</p>
+<p>Python comparison operators must be used with the class fields (and nested
+fields)</p>
+<div class="highlight"><pre><span></span><code><span class="n">products</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">Product</span><span class="o">.</span><span class="n">price</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span>
+</code></pre></div>
+<p>Supported operators: <code>==</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>!=</code></p>
+<p>Most of the query operators have wrappers.</p>
+<p>For example <code>$in</code> operator:</p>
+<div class="highlight"><pre><span></span><code><span class="n">products</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find</span><span class="p">(</span>
+    <span class="n">In</span><span class="p">(</span><span class="n">Product</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Chocolate&quot;</span><span class="p">,</span> <span class="s2">&quot;Fruits&quot;</span><span class="p">]))</span>
+</code></pre></div>
+<p>The whole list of the find query operators could be
+found <a href="/api/operators/find/">here</a></p>
+<p>For the complex cases native PyMongo syntax is also supported:</p>
+<div class="highlight"><pre><span></span><code><span class="n">products</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">})</span>
+</code></pre></div>
+<h2 id="find-one">Find One</h2>
+<p>To get the document by id it uses <a href="/api/document/#get">get</a> method.</p>
+<div class="highlight"><pre><span></span><code><span class="n">bar</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;608da169eb9e17281f0ab2ff&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>To find document by searching criteria it
+uses <a href="/api/document/#find_one">find_one</a> method</p>
+<div class="highlight"><pre><span></span><code><span class="n">bar</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find_one</span><span class="p">(</span><span class="n">Product</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Peanut Bar&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Projection could be used to return the document in another model format</p>
+<div class="highlight"><pre><span></span><code><span class="n">bar</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find_one</span><span class="p">(</span><span class="n">Product</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Peanut Bar&quot;</span><span class="p">,</span>
+                             <span class="n">projection_model</span><span class="o">=</span><span class="s2">&quot;ProductShortView&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="find-many">Find Many</h2>
+<p>To find many documents it uses <a href="/api/document/#find_many">find_many</a> (
+or <a href="/api/document/#find">find</a>, which is the same ) method</p>
+<h3 id="cursor">Cursor</h3>
+<p>It will return the <a href="/api/queries/#findmany">FindMany</a> query object. It
+implements an async generator pattern. Found documents are available
+via <code>async for</code> loop:</p>
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">for</span> <span class="n">product</span> <span class="ow">in</span> <span class="n">Product</span><span class="o">.</span><span class="n">find_many</span><span class="p">(</span>
+        <span class="n">Product</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Chocolate&quot;</span>
+<span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">product</span><span class="p">)</span>
+</code></pre></div>
+<p><a href="/api/queries/#to_list">to_list</a> method could be used to return the list of the
+found documents</p>
+<div class="highlight"><pre><span></span><code><span class="n">chocolates</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find</span><span class="p">(</span>
+    <span class="n">Product</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Chocolate&quot;</span>
+<span class="p">)</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="list-of-the-search-criterias">List of the search criterias</h3>
+<p>Search criterias could be listed as *args parameters of the <code>find*</code> method:</p>
+<div class="highlight"><pre><span></span><code><span class="n">chocolates</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find</span><span class="p">(</span>
+    <span class="n">Product</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Chocolate&quot;</span><span class="p">,</span>
+    <span class="n">Product</span><span class="o">.</span><span class="n">price</span> <span class="o">&lt;</span> <span class="mi">5</span>
+<span class="p">)</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="chaining">Chaining</h3>
+<p>Or a chain of <code>find</code> methods could be used instead</p>
+<div class="highlight"><pre><span></span><code><span class="n">chocolates</span> <span class="o">=</span> <span class="p">(</span><span class="k">await</span> <span class="n">Product</span>
+              <span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">Product</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Chocolate&quot;</span><span class="p">)</span>
+              <span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">Product</span><span class="o">.</span><span class="n">price</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+              <span class="p">)</span>
+</code></pre></div>
+<h3 id="sorting">Sorting</h3>
+<p>Sorting could be set up with the <a href="/api/queries/#sort">sort</a> method.</p>
+<p>It supports arguments like <code>+</code> or <code>-</code> class fields</p>
+<div class="highlight"><pre><span></span><code><span class="n">chocolates</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find</span><span class="p">(</span>
+    <span class="n">Product</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Chocolate&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="o">-</span><span class="n">Product</span><span class="o">.</span><span class="n">price</span><span class="p">)</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+</code></pre></div>
+<p>strings:</p>
+<div class="highlight"><pre><span></span><code><span class="n">chocolates</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find</span><span class="p">(</span>
+    <span class="n">Product</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Chocolate&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s2">&quot;-price&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+</code></pre></div>
+<p>and lists of tuples:</p>
+<div class="highlight"><pre><span></span><code><span class="n">chocolates</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find</span><span class="p">(</span>
+    <span class="n">Product</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Chocolate&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="p">(</span><span class="n">Product</span><span class="o">.</span><span class="n">price</span><span class="p">,</span> <span class="n">pymongo</span><span class="o">.</span><span class="n">DESCENDING</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Product</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">pymongo</span><span class="o">.</span><span class="n">ASCENDING</span><span class="p">),</span>
+    <span class="p">]</span>
+<span class="p">)</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="skip-and-limit">Skip and limit</h3>
+<div class="highlight"><pre><span></span><code><span class="n">chocolates</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find</span><span class="p">(</span>
+    <span class="n">Product</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Chocolate&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">skip</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+
+<span class="n">chocolates</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find</span><span class="p">(</span>
+    <span class="n">Product</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Chocolate&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="projections">Projections</h3>
+<p>Projection could be used to return the documents in another model format</p>
+<div class="highlight"><pre><span></span><code><span class="n">chocolates</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Product</span><span class="o">.</span><span class="n">find</span><span class="p">(</span>
+    <span class="n">Product</span><span class="o">.</span><span class="n">category</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;Chocolate&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">project</span><span class="p">(</span><span class="n">ProductShortView</span><span class="p">)</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../insert/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Insert
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../update/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Update
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      
+    
+  </body>
+</html>

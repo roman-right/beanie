@@ -14,7 +14,7 @@
     
     
       
-        <title>Fields - Documentation</title>
+        <title>Install and set up - Documentation</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#beanieodmfields" class="md-skip">
+        <a href="#installation" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fields
+              Install and set up
             
           </span>
         </div>
@@ -184,12 +184,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         Tutorial
@@ -205,11 +207,81 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../tutorial/install/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Install and set up
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Install and set up
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pip" class="md-nav__link">
+    PIP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poetry" class="md-nav__link">
+    Poetry
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-set-up" class="md-nav__link">
+    Document set up
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#init" class="md-nav__link">
+    Init
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -219,7 +291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/insert/" class="md-nav__link">
+      <a href="../insert/" class="md-nav__link">
         Insert
       </a>
     </li>
@@ -231,7 +303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/find/" class="md-nav__link">
+      <a href="../find/" class="md-nav__link">
         Find
       </a>
     </li>
@@ -243,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/update/" class="md-nav__link">
+      <a href="../update/" class="md-nav__link">
         Update
       </a>
     </li>
@@ -255,7 +327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/delete/" class="md-nav__link">
+      <a href="../delete/" class="md-nav__link">
         Delete
       </a>
     </li>
@@ -267,7 +339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/aggregate/" class="md-nav__link">
+      <a href="../aggregate/" class="md-nav__link">
         Aggregate
       </a>
     </li>
@@ -286,14 +358,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       <label class="md-nav__link" for="__nav_3">
         Api
@@ -311,7 +381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../document/" class="md-nav__link">
+      <a href="../../api/document/" class="md-nav__link">
         Document
       </a>
     </li>
@@ -323,7 +393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../queries/" class="md-nav__link">
+      <a href="../../api/queries/" class="md-nav__link">
         Query
       </a>
     </li>
@@ -335,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../interfaces/" class="md-nav__link">
+      <a href="../../api/interfaces/" class="md-nav__link">
         Interfaces
       </a>
     </li>
@@ -368,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../operators/find/" class="md-nav__link">
+      <a href="../../api/operators/find/" class="md-nav__link">
         Find
       </a>
     </li>
@@ -380,7 +450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../operators/update/" class="md-nav__link">
+      <a href="../../api/operators/update/" class="md-nav__link">
         Update
       </a>
     </li>
@@ -396,87 +466,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Fields
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../api/fields/" class="md-nav__link">
         Fields
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#beanieodmfields" class="md-nav__link">
-    beanie.odm.fields
-  </a>
-  
-    <nav class="md-nav" aria-label="beanie.odm.fields">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#indexed" class="md-nav__link">
-    Indexed
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pydanticobjectid" class="md-nav__link">
-    PydanticObjectId
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#expressionfield" class="md-nav__link">
-    ExpressionField
-  </a>
-  
-    <nav class="md-nav" aria-label="ExpressionField">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#__getattr__" class="md-nav__link">
-    __getattr__
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -541,16 +535,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#beanieodmfields" class="md-nav__link">
-    beanie.odm.fields
+  <a href="#installation" class="md-nav__link">
+    Installation
   </a>
   
-    <nav class="md-nav" aria-label="beanie.odm.fields">
+    <nav class="md-nav" aria-label="Installation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#indexed" class="md-nav__link">
-    Indexed
+  <a href="#pip" class="md-nav__link">
+    PIP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poetry" class="md-nav__link">
+    Poetry
   </a>
   
 </li>
@@ -561,29 +562,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pydanticobjectid" class="md-nav__link">
-    PydanticObjectId
+  <a href="#document-set-up" class="md-nav__link">
+    Document set up
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#expressionfield" class="md-nav__link">
-    ExpressionField
+  <a href="#init" class="md-nav__link">
+    Init
   </a>
-  
-    <nav class="md-nav" aria-label="ExpressionField">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#__getattr__" class="md-nav__link">
-    __getattr__
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -600,37 +588,66 @@
               
                 
                 
-                  <h1>Fields</h1>
+                  <h1>Install and set up</h1>
                 
-                <h2 id="beanieodmfields">beanie.odm.fields</h2>
-<h3 id="indexed">Indexed</h3>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">Indexed</span><span class="p">(</span>
-    <span class="n">typ</span><span class="p">,</span> 
-    <span class="n">index_type</span><span class="o">=</span><span class="n">ASCENDING</span>
+                <h2 id="installation">Installation</h2>
+<h3 id="pip">PIP</h3>
+<div class="highlight"><pre><span></span><code>pip install beanie
+</code></pre></div>
+<h3 id="poetry">Poetry</h3>
+<div class="highlight"><pre><span></span><code>poetry add beanie
+</code></pre></div>
+<h2 id="document-set-up">Document set up</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pymongo</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+
+<span class="kn">from</span> <span class="nn">beanie</span> <span class="kn">import</span> <span class="n">Document</span>
+<span class="kn">from</span> <span class="nn">beanie</span> <span class="kn">import</span> <span class="n">Indexed</span>
+
+
+<span class="k">class</span> <span class="nc">Category</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span>
+
+
+<span class="k">class</span> <span class="nc">Product</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>  <span class="c1"># This is the model</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">description</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">price</span><span class="p">:</span> <span class="n">Indexed</span><span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="n">pymongo</span><span class="o">.</span><span class="n">DESCENDING</span><span class="p">)</span>
+    <span class="n">category</span><span class="p">:</span> <span class="n">Category</span>
+
+    <span class="k">class</span> <span class="nc">Collection</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;products&quot;</span>
+        <span class="n">indexes</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">[</span>
+                <span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="n">pymongo</span><span class="o">.</span><span class="n">TEXT</span><span class="p">),</span>
+                <span class="p">(</span><span class="s2">&quot;description&quot;</span><span class="p">,</span> <span class="n">pymongo</span><span class="o">.</span><span class="n">TEXT</span><span class="p">),</span>
+            <span class="p">],</span>
+        <span class="p">]</span>
+</code></pre></div>
+<p>To set up the collection name it uses inner class Collection.</p>
+<p>To set up a simple index <a href="/api/fields/#indexed">Indexed</a> function over the data type can be used</p>
+<p>For the complex cases indexes should be set up in the Collection inner class also.</p>
+<h2 id="init">Init</h2>
+<p>Beanie uses Motor as a driver. </p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Crete Motor client</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">motor</span><span class="o">.</span><span class="n">motor_asyncio</span><span class="o">.</span><span class="n">AsyncIOMotorClient</span><span class="p">(</span>
+    <span class="s2">&quot;mongodb://user:pass@host:27017&quot;</span>
 <span class="p">)</span>
+
+<span class="c1"># Init beanie with the Product document class</span>
+<span class="k">await</span> <span class="n">init_beanie</span><span class="p">(</span><span class="n">database</span><span class="o">=</span><span class="n">client</span><span class="o">.</span><span class="n">db_name</span><span class="p">,</span> <span class="n">document_models</span><span class="o">=</span><span class="p">[</span><span class="n">Product</span><span class="p">])</span>
 </code></pre></div>
-<p>Returns a subclass of <code>typ</code> with an extra attribute <code>_indexed</code> et to True.
-When instantiated the type of the result will actually be <code>typ</code>.</p>
-<h2 id="pydanticobjectid">PydanticObjectId</h2>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">PydanticObjectId</span><span class="p">(</span><span class="n">ObjectId</span><span class="p">)</span>
+<p><code>init_beanie</code> supports not only list of classes for the document_models parameter, but also strings with the dot separated paths. Example:</p>
+<div class="highlight"><pre><span></span><code><span class="k">await</span> <span class="n">init_beanie</span><span class="p">(</span>
+        <span class="n">database</span><span class="o">=</span><span class="n">db</span><span class="p">,</span>
+        <span class="n">document_models</span><span class="o">=</span><span class="p">[</span>
+            <span class="s2">&quot;app.models.DemoDocument&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">)</span>
 </code></pre></div>
-<p>Object Id field. Compatible with Pydantic.</p>
-<h2 id="expressionfield">ExpressionField</h2>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ExpressionField</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="__getattr__">__getattr__</h3>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span>
-    <span class="bp">self</span><span class="p">,</span> 
-    <span class="n">item</span>
-<span class="p">)</span>
-</code></pre></div>
-<p>Get sub field</p>
-<p><strong>Arguments</strong>:</p>
-<ul>
-<li><code>item</code>: name of the subfield</li>
-</ul>
-<p><strong>Returns</strong>:</p>
-<p>ExpressionField</p>
                 
               
               
@@ -649,7 +666,7 @@ When instantiated the type of the result will actually be <code>typ</code>.</p>
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../operators/update/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../.." class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -658,19 +675,19 @@ When instantiated the type of the result will actually be <code>typ</code>.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Update
+              Introdution
             </div>
           </div>
         </a>
       
       
-        <a href="../../migrations/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../insert/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Migrations
+              Insert
             </div>
           </div>
           <div class="md-footer__button md-icon">
