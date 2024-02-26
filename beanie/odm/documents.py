@@ -513,11 +513,11 @@ class Document(
                 session=session,
                 bulk_writer=bulk_writer,
             )
-        except DocumentNotFound:
+        except DocumentNotFound as e:
             if use_revision_id and not ignore_revision:
-                raise RevisionIdWasChanged
+                raise RevisionIdWasChanged from e
             else:
-                raise DocumentNotFound
+                raise e
         return self
 
     @wrap_with_actions(EventTypes.SAVE)
@@ -711,8 +711,8 @@ class Document(
                 bulk_writer=bulk_writer,
                 **pymongo_kwargs,
             )
-        except DuplicateKeyError:
-            raise RevisionIdWasChanged
+        except DuplicateKeyError as e:
+            raise RevisionIdWasChanged from e
         if bulk_writer is None:
             if use_revision_id and not ignore_revision and result is None:
                 raise RevisionIdWasChanged
