@@ -127,6 +127,22 @@ await Vehicle.get(bus_2.id, with_children=True)
 # Bus(fuel='diesel', ..., color='yellow', body='minibus', seats=26)
 ```
 
+To delete all Documents in an inheritance tree, you can search with `with_children=True` and then delete:
+
+```python
+await Vehicle.find_all(with_children=True).delete()
+# will delete documents matching Vehicle, Car, Bus, etc ..
+# use with care!
+```
+
+Or `with_children=True` can be passed directly to `delete_all()`:
+
+```python
+await Vehicle.delete_all(with_children=True)
+# will delete documents matching Vehicle, Car, Bus, etc ..
+# use with care!
+```
+
 ### Relations
 
 Linked documents will be resolved into the respective classes

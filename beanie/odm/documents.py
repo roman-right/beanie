@@ -906,6 +906,7 @@ class Document(
         cls,
         session: Optional[ClientSession] = None,
         bulk_writer: Optional[BulkWriter] = None,
+        with_children: bool = False,
         **pymongo_kwargs,
     ) -> Optional[DeleteResult]:
         """
@@ -916,7 +917,7 @@ class Document(
         :param **pymongo_kwargs: pymongo native parameters for delete operation
         :return: Optional[DeleteResult] - pymongo DeleteResult instance.
         """
-        return await cls.find_all().delete(
+        return await cls.find_all(with_children=with_children).delete(
             session=session, bulk_writer=bulk_writer, **pymongo_kwargs
         )
 
