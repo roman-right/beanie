@@ -541,6 +541,13 @@ class IndexModelField:
             if ("_id", 1) in fields:
                 continue
 
+            if (
+                fields
+                and isinstance(fields[0][1], float)
+                and (fields[0][1] == 1.0 or fields[0][1] == -1.0)
+            ):
+                fields = [(fields[0][0], int(fields[0][1]))]
+
             options = {k: v for k, v in details.items() if k != "key"}
             index_model = IndexModelField(
                 IndexModel(fields, name=name, **options)
