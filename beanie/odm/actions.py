@@ -11,11 +11,17 @@ from typing import (
     Optional,
     Tuple,
     Type,
+    TypeVar,
     Union,
 )
 
+from typing_extensions import ParamSpec
+
 if TYPE_CHECKING:
-    from beanie.odm.documents import Document
+    from beanie.odm.documents import AsyncDocMethod, DocType, Document
+
+P = ParamSpec("P")
+R = TypeVar("R")
 
 
 class EventTypes(str, Enum):
@@ -136,10 +142,14 @@ class ActionRegistry:
         await asyncio.gather(*coros)
 
 
+# `Any` because there is arbitrary attribute assignment on this type
+F = TypeVar("F", bound=Any)
+
+
 def register_action(
-    event_types: Tuple[Union[List[EventTypes], EventTypes]],
+    event_types: Tuple[Union[List[EventTypes], EventTypes], ...],
     action_direction: ActionDirections,
-):
+) -> Callable[[F], F]:
     """
     Decorator. Base registration method.
     Used inside `before_event` and `after_event`
@@ -154,7 +164,7 @@ def register_action(
         else:
             final_event_types.append(event_type)
 
-    def decorator(f):
+    def decorator(f: F) -> F:
         f.has_action = True
         f.event_types = final_event_types
         f.action_direction = action_direction
@@ -163,7 +173,9 @@ def register_action(
     return decorator
 
 
-def before_event(*args: Union[List[EventTypes], EventTypes]):
+def before_event(
+    *args: Union[List[EventTypes], EventTypes]
+) -> Callable[[F], F]:
     """
     Decorator. It adds action, which should run before mentioned one
     or many events happen
@@ -172,11 +184,13 @@ def before_event(*args: Union[List[EventTypes], EventTypes]):
     :return: None
     """
     return register_action(
-        action_direction=ActionDirections.BEFORE, event_types=args  # type: ignore
+        action_direction=ActionDirections.BEFORE, event_types=args
     )
 
 
-def after_event(*args: Union[List[EventTypes], EventTypes]):
+def after_event(
+    *args: Union[List[EventTypes], EventTypes]
+) -> Callable[[F], F]:
     """
     Decorator. It adds action, which should run after mentioned one
     or many events happen
@@ -186,11 +200,15 @@ def after_event(*args: Union[List[EventTypes], EventTypes]):
     """
 
     return register_action(
-        action_direction=ActionDirections.AFTER, event_types=args  # type: ignore
+        action_direction=ActionDirections.AFTER, event_types=args
     )
 
 
-def wrap_with_actions(event_type: EventTypes):
+def wrap_with_actions(
+    event_type: EventTypes,
+) -> Callable[
+    ["AsyncDocMethod[DocType, P, R]"], "AsyncDocMethod[DocType, P, R]"
+]:
     """
     Helper function to wrap Document methods with
     before and after event listeners
@@ -198,14 +216,16 @@ def wrap_with_actions(event_type: EventTypes):
     :return: None
     """
 
-    def decorator(f: Callable):
+    def decorator(
+        f: "AsyncDocMethod[DocType, P, R]",
+    ) -> "AsyncDocMethod[DocType, P, R]":
         @wraps(f)
         async def wrapper(
-            self,
-            *args,
+            self: "DocType",
+            *args: P.args,
             skip_actions: Optional[List[Union[ActionDirections, str]]] = None,
-            **kwargs,
-        ):
+            **kwargs: P.kwargs,
+        ) -> R:
             if skip_actions is None:
                 skip_actions = []
 
@@ -216,7 +236,12 @@ def wrap_with_actions(event_type: EventTypes):
                 exclude=skip_actions,
             )
 
-            result = await f(self, *args, skip_actions=skip_actions, **kwargs)
+            result = await f(
+                self,
+                *args,
+                skip_actions=skip_actions,  # type: ignore[arg-type]
+                **kwargs,
+            )
 
             await ActionRegistry.run_actions(
                 self,

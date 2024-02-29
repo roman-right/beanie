@@ -1,11 +1,16 @@
 import inspect
 from functools import wraps
-from typing import TYPE_CHECKING, Callable
+from typing import TYPE_CHECKING, TypeVar
+
+from typing_extensions import ParamSpec
 
 from beanie.exceptions import StateManagementIsTurnedOff, StateNotSaved
 
 if TYPE_CHECKING:
-    from beanie.odm.documents import DocType
+    from beanie.odm.documents import AnyDocMethod, AsyncDocMethod, DocType
+
+P = ParamSpec("P")
+R = TypeVar("R")
 
 
 def check_if_state_saved(self: "DocType"):
@@ -17,7 +22,9 @@ def check_if_state_saved(self: "DocType"):
         raise StateNotSaved("No state was saved")
 
 
-def saved_state_needed(f: Callable):
+def saved_state_needed(
+    f: "AnyDocMethod[DocType, P, R]",
+) -> "AnyDocMethod[DocType, P, R]":
     @wraps(f)
     def sync_wrapper(self: "DocType", *args, **kwargs):
         check_if_state_saved(self)
@@ -26,10 +33,14 @@ def saved_state_needed(f: Callable):
     @wraps(f)
     async def async_wrapper(self: "DocType", *args, **kwargs):
         check_if_state_saved(self)
-        return await f(self, *args, **kwargs)
+        # type ignore because there is no nice/proper way to annotate both sync
+        # and async case without parametrized TypeVar, which is not supported
+        return await f(self, *args, **kwargs)  # type: ignore[misc]
 
     if inspect.iscoroutinefunction(f):
-        return async_wrapper
+        # type ignore because there is no nice/proper way to annotate both sync
+        # and async case without parametrized TypeVar, which is not supported
+        return async_wrapper  # type: ignore[return-value]
     return sync_wrapper
 
 
@@ -44,7 +55,9 @@ def check_if_previous_state_saved(self: "DocType"):
         )
 
 
-def previous_saved_state_needed(f: Callable):
+def previous_saved_state_needed(
+    f: "AnyDocMethod[DocType, P, R]",
+) -> "AnyDocMethod[DocType, P, R]":
     @wraps(f)
     def sync_wrapper(self: "DocType", *args, **kwargs):
         check_if_previous_state_saved(self)
@@ -53,16 +66,22 @@ def previous_saved_state_needed(f: Callable):
     @wraps(f)
     async def async_wrapper(self: "DocType", *args, **kwargs):
         check_if_previous_state_saved(self)
-        return await f(self, *args, **kwargs)
+        # type ignore because there is no nice/proper way to annotate both sync
+        # and async case without parametrized TypeVar, which is not supported
+        return await f(self, *args, **kwargs)  # type: ignore[misc]
 
     if inspect.iscoroutinefunction(f):
-        return async_wrapper
+        # type ignore because there is no nice/proper way to annotate both sync
+        # and async case without parametrized TypeVar, which is not supported
+        return async_wrapper  # type: ignore[return-value]
     return sync_wrapper
 
 
-def save_state_after(f: Callable):
+def save_state_after(
+    f: "AsyncDocMethod[DocType, P, R]",
+) -> "AsyncDocMethod[DocType, P, R]":
     @wraps(f)
-    async def wrapper(self: "DocType", *args, **kwargs):
+    async def wrapper(self: "DocType", *args: P.args, **kwargs: P.kwargs) -> R:
         result = await f(self, *args, **kwargs)
         self._save_state()
         return result
