@@ -41,7 +41,7 @@ def parse_model(model_type: Type[BaseModel], data: Any):
 
 def get_extra_field_info(field, parameter: str):
     if IS_PYDANTIC_V2:
-        if field.json_schema_extra is not None:
+        if isinstance(field.json_schema_extra, dict):
             return field.json_schema_extra.get(parameter)
         return None
     else:
