@@ -40,7 +40,7 @@ Simpler updates can be performed using the `set`, `inc`, and `current_date` meth
 ```python
 bar = await Product.find_one(Product.name == "Mars")
 await bar.set({Product.name:"Gold bar"})
-bar = await Product.find_all(Product.price > .5).inc({Product.price: 1})
+bar = await Product.find(Product.price > .5).inc({Product.price: 1})
 ```
 
 More complex update operations can be performed by calling `update()` with an update operator, similar to find queries:
