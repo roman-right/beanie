@@ -1,4 +1,5 @@
 import logging
+import types
 from importlib.machinery import SourceFileLoader
 from pathlib import Path
 from typing import List, Optional, Type
@@ -217,9 +218,11 @@ class MigrationNode:
         prev_migration_node = root_migration_node
 
         for name in names:
-            module = SourceFileLoader(
+            loader = SourceFileLoader(
                 (path / name).stem, str((path / name).absolute())
-            ).load_module((path / name).stem)
+            )
+            module = types.ModuleType(loader.name)
+            loader.exec_module(module)
             forward_class = getattr(module, "Forward", None)
             backward_class = getattr(module, "Backward", None)
             migration_node = cls(

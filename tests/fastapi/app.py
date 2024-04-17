@@ -1,3 +1,5 @@
+from contextlib import asynccontextmanager
+
 import motor.motor_asyncio
 from fastapi import FastAPI
 
@@ -6,11 +8,9 @@ from tests.conftest import Settings
 from tests.fastapi.models import DoorAPI, HouseAPI, RoofAPI, WindowAPI
 from tests.fastapi.routes import house_router
 
-app = FastAPI()
 
-
-@app.on_event("startup")
-async def app_init():
+@asynccontextmanager
+async def live_span(_: FastAPI):
     # CREATE MOTOR CLIENT
     client = motor.motor_asyncio.AsyncIOMotorClient(Settings().mongodb_dsn)
 
@@ -19,6 +19,10 @@ async def app_init():
         client.beanie_db,
         document_models=[HouseAPI, WindowAPI, DoorAPI, RoofAPI],
     )
+    yield
 
-    # ADD ROUTES
-    app.include_router(house_router, prefix="/v1", tags=["house"])
+
+app = FastAPI(lifespan=live_span)
+
+# ADD ROUTES
+app.include_router(house_router, prefix="/v1", tags=["house"])
