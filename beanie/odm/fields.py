@@ -187,14 +187,18 @@ class PydanticObjectId(ObjectId):
 
 
 if not IS_PYDANTIC_V2:
-    ENCODERS_BY_TYPE[
-        PydanticObjectId
-    ] = str  # it is a workaround to force pydantic make json schema for this field
+    ENCODERS_BY_TYPE[PydanticObjectId] = (
+        str  # it is a workaround to force pydantic make json schema for this field
+    )
 
 BeanieObjectId = PydanticObjectId
 
 
-class ExpressionField(str):
+T = TypeVar("T")
+
+
+class ExpressionField(str, Generic[T]):
+    def __init__(self, field: T): ...
     def __getitem__(self, item):
         """
         Get sub field

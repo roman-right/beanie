@@ -1,8 +1,7 @@
 from abc import abstractmethod
-from typing import Any, Dict, Mapping, Optional, Union
-
-from pymongo.client_session import ClientSession
-
+from typing import Any, Awaitable, Dict, Mapping, Optional, Union, overload
+from motor.motor_asyncio import AsyncIOMotorClientSession
+from pymongo.results import UpdateResult
 from beanie.odm.bulk import BulkWriter
 from beanie.odm.fields import ExpressionField
 from beanie.odm.operators.update.general import (
@@ -21,18 +20,27 @@ class UpdateMethods:
     def update(
         self,
         *args: Mapping[str, Any],
-        session: Optional[ClientSession] = None,
+        session: Optional[AsyncIOMotorClientSession] = None,
         bulk_writer: Optional[BulkWriter] = None,
-        **kwargs,
-    ):
+        **kwargs: Any,
+    ) -> Awaitable[UpdateResult]:
         return self
+
+    @overload
+    async def set(  # type: ignore
+        self,
+        expression: Dict[Union[ExpressionField, str], Any],
+        session: Optional[AsyncIOMotorClientSession] = None,
+        bulk_writer: Optional[BulkWriter] = None,
+        **kwargs: Any,
+    ) -> UpdateResult: ...
 
     def set(
         self,
         expression: Dict[Union[ExpressionField, str], Any],
-        session: Optional[ClientSession] = None,
+        session: Optional[AsyncIOMotorClientSession] = None,
         bulk_writer: Optional[BulkWriter] = None,
-        **kwargs,
+        **kwargs: Any,
     ):
         """
         Set values
@@ -52,7 +60,7 @@ class UpdateMethods:
 
         :param expression: Dict[Union[ExpressionField, str], Any] - keys and
         values to set
-        :param session: Optional[ClientSession] - pymongo session
+        :param session: Optional[AsyncIOMotorClientSession] - pymongo session
         :param bulk_writer: Optional[BulkWriter] - bulk writer
         :return: self
         """
@@ -60,12 +68,21 @@ class UpdateMethods:
             Set(expression), session=session, bulk_writer=bulk_writer, **kwargs
         )
 
+    @overload
+    async def current_date(  # type: ignore
+        self,
+        expression: Dict[Union[ExpressionField, str], Any],
+        session: Optional[AsyncIOMotorClientSession] = None,
+        bulk_writer: Optional[BulkWriter] = None,
+        **kwargs: Any,
+    ) -> UpdateResult: ...
+
     def current_date(
         self,
         expression: Dict[Union[ExpressionField, str], Any],
-        session: Optional[ClientSession] = None,
+        session: Optional[AsyncIOMotorClientSession] = None,
         bulk_writer: Optional[BulkWriter] = None,
-        **kwargs,
+        **kwargs: Any,
     ):
         """
         Set current date
@@ -73,7 +90,7 @@ class UpdateMethods:
         Uses [CurrentDate operator](operators/update.md#currentdate)
 
         :param expression: Dict[Union[ExpressionField, str], Any]
-        :param session: Optional[ClientSession] - pymongo session
+        :param session: Optional[AsyncIOMotorClientSession] - pymongo session
         :param bulk_writer: Optional[BulkWriter] - bulk writer
         :return: self
         """
@@ -84,12 +101,21 @@ class UpdateMethods:
             **kwargs,
         )
 
+    @overload
+    async def inc(  # type: ignore
+        self,
+        expression: Dict[Union[ExpressionField, str], Any],
+        session: Optional[AsyncIOMotorClientSession] = None,
+        bulk_writer: Optional[BulkWriter] = None,
+        **kwargs: Any,
+    ) -> UpdateResult: ...
+
     def inc(
         self,
         expression: Dict[Union[ExpressionField, str], Any],
-        session: Optional[ClientSession] = None,
+        session: Optional[AsyncIOMotorClientSession] = None,
         bulk_writer: Optional[BulkWriter] = None,
-        **kwargs,
+        **kwargs: Any,
     ):
         """
         Increment
@@ -108,7 +134,7 @@ class UpdateMethods:
         Uses [Inc operator](operators/update.md#inc)
 
         :param expression: Dict[Union[ExpressionField, str], Any]
-        :param session: Optional[ClientSession] - pymongo session
+        :param session: Optional[AsyncIOMotorClientSession] - pymongo session
         :param bulk_writer: Optional[BulkWriter] - bulk writer
         :return: self
         """

@@ -2,7 +2,7 @@ from typing import TYPE_CHECKING, Any, Dict, Generator, Mapping, Optional, Type
 
 from pymongo import DeleteMany as DeleteManyPyMongo
 from pymongo import DeleteOne as DeleteOnePyMongo
-from pymongo.client_session import ClientSession
+from motor.motor_asyncio import AsyncIOMotorClientSession
 from pymongo.results import DeleteResult
 
 from beanie.odm.bulk import BulkWriter, Operation
@@ -23,11 +23,11 @@ class DeleteQuery(SessionMethods, CloneInterface):
         document_model: Type["DocType"],
         find_query: Mapping[str, Any],
         bulk_writer: Optional[BulkWriter] = None,
-        **pymongo_kwargs,
+        **pymongo_kwargs: Any,
     ):
         self.document_model = document_model
         self.find_query = find_query
-        self.session: Optional[ClientSession] = None
+        self.session: Optional[AsyncIOMotorClientSession] = None
         self.bulk_writer = bulk_writer
         self.pymongo_kwargs: Dict[str, Any] = pymongo_kwargs
 

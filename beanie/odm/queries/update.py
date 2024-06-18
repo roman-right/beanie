@@ -16,7 +16,7 @@ from typing import (
 from pymongo import ReturnDocument
 from pymongo import UpdateMany as UpdateManyPyMongo
 from pymongo import UpdateOne as UpdateOnePyMongo
-from pymongo.client_session import ClientSession
+from motor.motor_asyncio import AsyncIOMotorClientSession
 from pymongo.results import InsertOneResult, UpdateResult
 
 from beanie.odm.bulk import BulkWriter, Operation
@@ -96,8 +96,7 @@ class UpdateQuery(UpdateMethods, SessionMethods, CloneInterface):
         return Encoder(custom_encoders=self.encoders).encode(query)
 
     @abstractmethod
-    async def _update(self) -> UpdateResult:
-        ...
+    async def _update(self) -> UpdateResult: ...
 
 
 class UpdateMany(UpdateQuery):
@@ -108,15 +107,15 @@ class UpdateMany(UpdateQuery):
     def update(
         self,
         *args: Mapping[str, Any],
-        session: Optional[ClientSession] = None,
+        session: Optional[AsyncIOMotorClientSession] = None,
         bulk_writer: Optional[BulkWriter] = None,
-        **pymongo_kwargs,
+        **pymongo_kwargs: Any,
     ) -> "UpdateQuery":
         """
         Provide modifications to the update query.
 
         :param args: *Union[dict, Mapping] - the modifications to apply.
-        :param session: Optional[ClientSession]
+        :param session: Optional[AsyncIOMotorClientSession]
         :param bulk_writer: Optional[BulkWriter]
         :param pymongo_kwargs: pymongo native parameters for update operation
         :return: UpdateMany query
@@ -132,8 +131,8 @@ class UpdateMany(UpdateQuery):
         self,
         *args: Mapping[str, Any],
         on_insert: "DocType",
-        session: Optional[ClientSession] = None,
-        **pymongo_kwargs,
+        session: Optional[AsyncIOMotorClientSession] = None,
+        **pymongo_kwargs: Any,
     ) -> "UpdateQuery":
         """
         Provide modifications to the upsert query.
@@ -141,7 +140,7 @@ class UpdateMany(UpdateQuery):
         :param args: *Union[dict, Mapping] - the modifications to apply.
         :param on_insert: DocType - document to insert if there is no matched
         document in the collection
-        :param session: Optional[ClientSession]
+        :param session: Optional[AsyncIOMotorClientSession]
         :param **pymongo_kwargs: pymongo native parameters for update operation
         :return: UpdateMany query
         """
@@ -152,15 +151,15 @@ class UpdateMany(UpdateQuery):
     def update_many(
         self,
         *args: Mapping[str, Any],
-        session: Optional[ClientSession] = None,
+        session: Optional[AsyncIOMotorClientSession] = None,
         bulk_writer: Optional[BulkWriter] = None,
-        **pymongo_kwargs,
+        **pymongo_kwargs: Any,
     ):
         """
         Provide modifications to the update query
 
         :param args: *Union[dict, Mapping] - the modifications to apply.
-        :param session: Optional[ClientSession]
+        :param session: Optional[AsyncIOMotorClientSession]
         :param bulk_writer: "BulkWriter" - Beanie bulk writer
         :param pymongo_kwargs: pymongo native parameters for update operation
         :return: UpdateMany query
@@ -228,16 +227,16 @@ class UpdateOne(UpdateQuery):
     def update(
         self,
         *args: Mapping[str, Any],
-        session: Optional[ClientSession] = None,
+        session: Optional[AsyncIOMotorClientSession] = None,
         bulk_writer: Optional[BulkWriter] = None,
         response_type: Optional[UpdateResponse] = None,
-        **pymongo_kwargs,
+        **pymongo_kwargs: Any,
     ) -> "UpdateQuery":
         """
         Provide modifications to the update query.
 
         :param args: *Union[dict, Mapping] - the modifications to apply.
-        :param session: Optional[ClientSession]
+        :param session: Optional[AsyncIOMotorClientSession]
         :param bulk_writer: Optional[BulkWriter]
         :param response_type: UpdateResponse
         :param pymongo_kwargs: pymongo native parameters for update operation
@@ -256,9 +255,9 @@ class UpdateOne(UpdateQuery):
         self,
         *args: Mapping[str, Any],
         on_insert: "DocType",
-        session: Optional[ClientSession] = None,
+        session: Optional[AsyncIOMotorClientSession] = None,
         response_type: Optional[UpdateResponse] = None,
-        **pymongo_kwargs,
+        **pymongo_kwargs: Any,
     ) -> "UpdateQuery":
         """
         Provide modifications to the upsert query.
@@ -266,7 +265,7 @@ class UpdateOne(UpdateQuery):
         :param args: *Union[dict, Mapping] - the modifications to apply.
         :param on_insert: DocType - document to insert if there is no matched
         document in the collection
-        :param session: Optional[ClientSession]
+        :param session: Optional[AsyncIOMotorClientSession]
         :param response_type: Optional[UpdateResponse]
         :param pymongo_kwargs: pymongo native parameters for update operation
         :return: UpdateMany query
@@ -283,16 +282,16 @@ class UpdateOne(UpdateQuery):
     def update_one(
         self,
         *args: Mapping[str, Any],
-        session: Optional[ClientSession] = None,
+        session: Optional[AsyncIOMotorClientSession] = None,
         bulk_writer: Optional[BulkWriter] = None,
         response_type: Optional[UpdateResponse] = None,
-        **pymongo_kwargs,
+        **pymongo_kwargs: Any,
     ):
         """
         Provide modifications to the update query. The same as `update()`
 
         :param args: *Union[dict, Mapping] - the modifications to apply.
-        :param session: Optional[ClientSession]
+        :param session: Optional[AsyncIOMotorClientSession]
         :param bulk_writer: "BulkWriter" - Beanie bulk writer
         :param response_type: Optional[UpdateResponse]
         :param pymongo_kwargs: pymongo native parameters for update operation
@@ -320,9 +319,11 @@ class UpdateOne(UpdateQuery):
                     self.find_query,
                     self.update_query,
                     session=self.session,
-                    return_document=ReturnDocument.BEFORE
-                    if self.response_type == UpdateResponse.OLD_DOCUMENT
-                    else ReturnDocument.AFTER,
+                    return_document=(
+                        ReturnDocument.BEFORE
+                        if self.response_type == UpdateResponse.OLD_DOCUMENT
+                        else ReturnDocument.AFTER
+                    ),
                     **self.pymongo_kwargs,
                 )
                 if result is not None:

@@ -1,6 +1,6 @@
 from typing import Optional
 
-from pymongo.client_session import ClientSession
+from motor.motor_asyncio import AsyncIOMotorClientSession
 
 
 class SessionMethods:
@@ -8,12 +8,12 @@ class SessionMethods:
     Session methods
     """
 
-    def set_session(self, session: Optional[ClientSession] = None):
+    def set_session(self, session: Optional[AsyncIOMotorClientSession] = None):
         """
         Set pymongo session
-        :param session: Optional[ClientSession] - pymongo session
+        :param session: Optional[AsyncIOMotorClientSession] - pymongo session
         :return:
         """
         if session is not None:
-            self.session: Optional[ClientSession] = session
+            self.session: Optional[AsyncIOMotorClientSession] = session
         return self

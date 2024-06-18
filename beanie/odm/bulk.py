@@ -9,7 +9,7 @@ from pymongo import (
     UpdateMany,
     UpdateOne,
 )
-from pymongo.client_session import ClientSession
+from motor.motor_asyncio import AsyncIOMotorClientSession
 from pymongo.results import BulkWriteResult
 
 from beanie.odm.utils.pydantic import IS_PYDANTIC_V2
@@ -43,7 +43,7 @@ class Operation(BaseModel):
 
 
 class BulkWriter:
-    def __init__(self, session: Optional[ClientSession] = None):
+    def __init__(self, session: Optional[AsyncIOMotorClientSession] = None):
         self.operations: List[Operation] = []
         self.session = session
 

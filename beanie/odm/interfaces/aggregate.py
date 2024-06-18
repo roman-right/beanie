@@ -2,7 +2,7 @@ from abc import abstractmethod
 from typing import Any, Dict, Optional, Type, TypeVar, Union, overload
 
 from pydantic import BaseModel
-from pymongo.client_session import ClientSession
+from motor.motor_asyncio import AsyncIOMotorClientSession
 
 from beanie.odm.queries.aggregation import AggregationQuery
 from beanie.odm.queries.find import FindMany
@@ -23,11 +23,10 @@ class AggregateInterface:
         cls: Type[DocType],
         aggregation_pipeline: list,
         projection_model: None = None,
-        session: Optional[ClientSession] = None,
+        session: Optional[AsyncIOMotorClientSession] = None,
         ignore_cache: bool = False,
-        **pymongo_kwargs,
-    ) -> AggregationQuery[Dict[str, Any]]:
-        ...
+        **pymongo_kwargs: Any,
+    ) -> AggregationQuery[Dict[str, Any]]: ...
 
     @overload
     @classmethod
@@ -35,20 +34,19 @@ class AggregateInterface:
         cls: Type[DocType],
         aggregation_pipeline: list,
         projection_model: Type[DocumentProjectionType],
-        session: Optional[ClientSession] = None,
+        session: Optional[AsyncIOMotorClientSession] = None,
         ignore_cache: bool = False,
-        **pymongo_kwargs,
-    ) -> AggregationQuery[DocumentProjectionType]:
-        ...
+        **pymongo_kwargs: Any,
+    ) -> AggregationQuery[DocumentProjectionType]: ...
 
     @classmethod
     def aggregate(
         cls: Type[DocType],
         aggregation_pipeline: list,
         projection_model: Optional[Type[DocumentProjectionType]] = None,
-        session: Optional[ClientSession] = None,
+        session: Optional[AsyncIOMotorClientSession] = None,
         ignore_cache: bool = False,
-        **pymongo_kwargs,
+        **pymongo_kwargs: Any,
     ) -> Union[
         AggregationQuery[Dict[str, Any]],
         AggregationQuery[DocumentProjectionType],
@@ -58,7 +56,7 @@ class AggregateInterface:
         Returns [AggregationQuery](query.md#aggregationquery) query object
         :param aggregation_pipeline: list - aggregation pipeline
         :param projection_model: Type[BaseModel]
-        :param session: Optional[ClientSession]
+        :param session: Optional[AsyncIOMotorClientSession]
         :param ignore_cache: bool
         :param **pymongo_kwargs: pymongo native parameters for aggregate operation
         :return: [AggregationQuery](query.md#aggregationquery)
