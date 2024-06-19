@@ -71,6 +71,7 @@ from beanie.odm.interfaces.detector import ModelType
 from beanie.odm.interfaces.find import FindInterface
 from beanie.odm.interfaces.getters import OtherGettersInterface
 from beanie.odm.interfaces.inheritance import InheritanceInterface
+from beanie.odm.interfaces.session import DocumentSessionMethods
 from beanie.odm.interfaces.setters import SettersInterface
 from beanie.odm.models import (
     InspectionError,
@@ -160,6 +161,7 @@ class Document(
     FindInterface,
     AggregateInterface,
     OtherGettersInterface,
+    DocumentSessionMethods,
 ):
     """
     Document Mapping class.
@@ -274,9 +276,11 @@ class Document(
                 get_field_type(get_model_fields(cls)["id"]), document_id
             )
 
+        _session = session if session else cls.get_session()
+
         return await cls.find_one(
             {"_id": document_id},
-            session=session,
+            session=_session,
             ignore_cache=ignore_cache,
             fetch_links=fetch_links,
             with_children=with_children,
@@ -334,6 +338,8 @@ class Document(
         Insert the document (self) to the collection
         :return: Document
         """
+        _session = session if session else Document.get_session()
+
         if self.get_settings().use_revision:
             self.revision_id = uuid4()
         if link_rule == WriteRules.WRITE:
@@ -363,7 +369,7 @@ class Document(
             get_dict(
                 self, to_db=True, keep_nulls=self.get_settings().keep_nulls
             ),
-            session=session,
+            session=_session,
         )
         new_id = result.inserted_id
         if not isinstance(
@@ -384,7 +390,8 @@ class Document(
         The same as self.insert()
         :return: Document
         """
-        return await self.insert(session=session)
+        _session = session if session else Document.get_session()
+        return await self.insert(session=_session)
 
     @classmethod
     async def insert_one(
@@ -402,12 +409,14 @@ class Document(
         :param link_rule: InsertRules - hot to manage link fields
         :return: DocType
         """
+        _session = session if session else cls.get_session()
+
         if not isinstance(document, cls):
             raise TypeError(
                 "Inserting document must be of the original document class"
             )
         if bulk_writer is None:
-            return await document.insert(link_rule=link_rule, session=session)
+            return await document.insert(link_rule=link_rule, session=_session)
         else:
             if link_rule == WriteRules.WRITE:
                 raise NotSupported(
@@ -442,6 +451,8 @@ class Document(
         :param link_rule: InsertRules - how to manage link fields
         :return: InsertManyResult
         """
+        _session = session if session else cls.get_session()
+
         if link_rule == WriteRules.WRITE:
             raise NotSupported(
                 "Cascade insert not supported for insert many method"
@@ -455,7 +466,7 @@ class Document(
             for document in documents
         ]
         return await cls.get_motor_collection().insert_many(
-            documents_list, session=session, **pymongo_kwargs
+            documents_list, session=_session, **pymongo_kwargs
         )
 
     @wrap_with_actions(EventTypes.REPLACE)
@@ -478,6 +489,8 @@ class Document(
         :param bulk_writer: "BulkWriter" - Beanie bulk writer
         :return: self
         """
+        _session = session if session else Document.get_session()
+
         if self.id is None:
             raise ValueError("Document must have an id")
 
@@ -531,7 +544,7 @@ class Document(
         try:
             await self.find_one(find_query).replace_one(
                 self,
-                session=session,
+                session=_session,
                 bulk_writer=bulk_writer,
             )
         except DocumentNotFound:
@@ -560,6 +573,8 @@ class Document(
         :param ignore_revision: bool - do force save.
         :return: None
         """
+        _session = session if session else Document.get_session()
+
         if link_rule == WriteRules.WRITE:
             link_fields = self.get_link_fields()
             if link_fields is not None:
@@ -573,7 +588,7 @@ class Document(
                     ]:
                         if isinstance(value, Document):
                             await value.save(
-                                link_rule=link_rule, session=session
+                                link_rule=link_rule, session=_session
                             )
                     if field_info.link_type in [
                         LinkTypes.LIST,
@@ -585,7 +600,7 @@ class Document(
                             await asyncio.gather(
                                 *[
                                     obj.save(
-                                        link_rule=link_rule, session=session
+                                        link_rule=link_rule, session=_session
                                     )
                                     for obj in value
                                     if isinstance(obj, Document)
@@ -602,7 +617,7 @@ class Document(
                     )
                 ),
                 Unset(get_top_level_nones(self)),
-                session=session,
+                session=_session,
                 ignore_revision=ignore_revision,
                 upsert=True,
                 **kwargs,
@@ -616,7 +631,7 @@ class Document(
                         keep_nulls=self.get_settings().keep_nulls,
                     )
                 ),
-                session=session,
+                session=_session,
                 ignore_revision=ignore_revision,
                 upsert=True,
                 **kwargs,
@@ -640,6 +655,8 @@ class Document(
         :param bulk_writer: "BulkWriter" - Beanie bulk writer
         :return: None
         """
+        _session = session if session else Document.get_session()
+
         if not self.is_changed:
             return None
         changes = self.get_changes()
@@ -648,14 +665,14 @@ class Document(
                 SetOperator(changes),
                 Unset(get_top_level_nones(self)),
                 ignore_revision=ignore_revision,
-                session=session,
+                session=_session,
                 bulk_writer=bulk_writer,
             )
         else:
             return await self.set(
                 changes,
                 ignore_revision=ignore_revision,
-                session=session,
+                session=_session,
                 bulk_writer=bulk_writer,
             )
 
@@ -672,6 +689,8 @@ class Document(
         :param session: Optional[ClientSession] - pymongo session.
         :return: None
         """
+        _session = session if session else cls.get_session()
+
         ids_list = [document.id for document in documents]
         if await cls.find(In(cls.id, ids_list)).count() != len(ids_list):
             raise ReplaceError(
@@ -680,7 +699,7 @@ class Document(
         async with BulkWriter(session=session) as bulk_writer:
             for document in documents:
                 await document.replace(
-                    bulk_writer=bulk_writer, session=session
+                    bulk_writer=bulk_writer, session=_session
                 )
 
     @wrap_with_actions(EventTypes.UPDATE)
@@ -705,6 +724,8 @@ class Document(
         :param pymongo_kwargs: pymongo native parameters for update operation
         :return: None
         """
+        _session = session if session else Document.get_session()
+
         arguments = list(args)
 
         if skip_sync is not None:
@@ -727,7 +748,7 @@ class Document(
         try:
             result = await self.find_one(find_query).update(
                 *arguments,
-                session=session,
+                session=_session,
                 response_type=UpdateResponse.NEW_DOCUMENT,
                 bulk_writer=bulk_writer,
                 **pymongo_kwargs,
@@ -757,8 +778,10 @@ class Document(
         :param **pymongo_kwargs: pymongo native parameters for find operation
         :return: UpdateMany query
         """
+        _session = session if session else cls.get_session()
+
         return cls.find_all().update_many(
-            *args, session=session, bulk_writer=bulk_writer, **pymongo_kwargs
+            *args, session=_session, bulk_writer=bulk_writer, **pymongo_kwargs
         )
 
     def set(
@@ -792,9 +815,11 @@ class Document(
         :param skip_sync: bool - skip doc syncing. Available for the direct instances only
         :return: self
         """
+        _session = session if session else Document.get_session()
+
         return self.update(
             SetOperator(expression),
-            session=session,
+            session=_session,
             bulk_writer=bulk_writer,
             skip_sync=skip_sync,
             **kwargs,
@@ -819,9 +844,11 @@ class Document(
         :param skip_sync: bool - skip doc syncing. Available for the direct instances only
         :return: self
         """
+        _session = session if session else Document.get_session()
+
         return self.update(
             CurrentDate(expression),
-            session=session,
+            session=_session,
             bulk_writer=bulk_writer,
             skip_sync=skip_sync,
             **kwargs,
@@ -857,9 +884,11 @@ class Document(
         :param skip_sync: bool - skip doc syncing. Available for the direct instances only
         :return: self
         """
+        _session = session if session else Document.get_session()
+
         return self.update(
             Inc(expression),
-            session=session,
+            session=_session,
             bulk_writer=bulk_writer,
             skip_sync=skip_sync,
             **kwargs,
@@ -883,6 +912,7 @@ class Document(
         :param **pymongo_kwargs: pymongo native parameters for delete operation
         :return: Optional[DeleteResult] - pymongo DeleteResult instance.
         """
+        _session = session if session else Document.get_session()
 
         if link_rule == DeleteRules.DELETE_LINKS:
             link_fields = self.get_link_fields()
@@ -898,6 +928,7 @@ class Document(
                         if isinstance(value, Document):
                             await value.delete(
                                 link_rule=DeleteRules.DELETE_LINKS,
+                                session=_session,
                                 **pymongo_kwargs,
                             )
                     if field_info.link_type in [
@@ -911,6 +942,7 @@ class Document(
                                 *[
                                     obj.delete(
                                         link_rule=DeleteRules.DELETE_LINKS,
+                                        session=_session,
                                         **pymongo_kwargs,
                                     )
                                     for obj in value
@@ -919,7 +951,7 @@ class Document(
                             )
 
         return await self.find_one({"_id": self.id}).delete(
-            session=session, bulk_writer=bulk_writer, **pymongo_kwargs
+            session=_session, bulk_writer=bulk_writer, **pymongo_kwargs
         )
 
     @classmethod
@@ -937,8 +969,10 @@ class Document(
         :param **pymongo_kwargs: pymongo native parameters for delete operation
         :return: Optional[DeleteResult] - pymongo DeleteResult instance.
         """
+        _session = session if session else Document.get_session()
+
         return await cls.find_all().delete(
-            session=session, bulk_writer=bulk_writer, **pymongo_kwargs
+            session=_session, bulk_writer=bulk_writer, **pymongo_kwargs
         )
 
     # State management
@@ -1115,9 +1149,11 @@ class Document(
 
         :return: InspectionResult
         """
+        _session = session if session else cls.get_session()
+
         inspection_result = InspectionResult()
         async for json_document in cls.get_motor_collection().find(
-            {}, session=session
+            {}, session=_session
         ):
             try:
                 parse_model(cls, json_document)
@@ -1200,8 +1236,10 @@ class Document(
         session: Optional[ClientSession] = None,
         **kwargs: Any,
     ) -> list:
+        _session = session if session else cls.get_session()
+
         return await cls.get_motor_collection().distinct(
-            key, filter, session, **kwargs
+            key, filter, _session, **kwargs
         )
 
     @classmethod
@@ -1224,8 +1262,10 @@ class DocumentWithSoftDelete(Document):
         skip_actions: Optional[List[Union[ActionDirections, str]]] = None,
         **pymongo_kwargs,
     ) -> Optional[DeleteResult]:
+        _session = session if session else Document.get_session()
+
         return await super().delete(
-            session=session,
+            session=_session,
             bulk_writer=bulk_writer,
             link_rule=link_rule,
             skip_actions=skip_actions,
@@ -1240,8 +1280,10 @@ class DocumentWithSoftDelete(Document):
         skip_actions: Optional[List[Union[ActionDirections, str]]] = None,
         **pymongo_kwargs,
     ) -> Optional[DeleteResult]:
+        _session = session if session else Document.get_session()
+
         self.deleted_at = datetime.utcnow()
-        await self.save()
+        await self.save(session=_session)
         return None
 
     @classmethod
@@ -1261,13 +1303,15 @@ class DocumentWithSoftDelete(Document):
         nesting_depths_per_field: Optional[Dict[str, int]] = None,
         **pymongo_kwargs,
     ) -> Union[FindMany[FindType], FindMany["DocumentProjectionType"]]:
+        _session = session if session else cls.get_session()
+
         return cls._find_many_query_class(document_model=cls).find_many(
             *args,
             sort=sort,
             skip=skip,
             limit=limit,
             projection_model=projection_model,
-            session=session,
+            session=_session,
             ignore_cache=ignore_cache,
             fetch_links=fetch_links,
             lazy_parse=lazy_parse,
@@ -1293,6 +1337,8 @@ class DocumentWithSoftDelete(Document):
         nesting_depths_per_field: Optional[Dict[str, int]] = None,
         **pymongo_kwargs,
     ) -> Union[FindMany[FindType], FindMany["DocumentProjectionType"]]:
+        _session = session if session else cls.get_session()
+
         args = cls._add_class_id_filter(args, with_children) + (
             {"deleted_at": None},
         )
@@ -1302,7 +1348,7 @@ class DocumentWithSoftDelete(Document):
             skip=skip,
             limit=limit,
             projection_model=projection_model,
-            session=session,
+            session=_session,
             ignore_cache=ignore_cache,
             fetch_links=fetch_links,
             lazy_parse=lazy_parse,
@@ -1324,13 +1370,15 @@ class DocumentWithSoftDelete(Document):
         nesting_depths_per_field: Optional[Dict[str, int]] = None,
         **pymongo_kwargs,
     ) -> Union[FindOne[FindType], FindOne["DocumentProjectionType"]]:
+        _session = session if session else cls.get_session()
+
         args = cls._add_class_id_filter(args, with_children) + (
             {"deleted_at": None},
         )
         return cls._find_one_query_class(document_model=cls).find_one(
             *args,
             projection_model=projection_model,
-            session=session,
+            session=_session,
             ignore_cache=ignore_cache,
             fetch_links=fetch_links,
             nesting_depth=nesting_depth,

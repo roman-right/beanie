@@ -99,6 +99,8 @@ renderer:
           source: docs/tutorial/on_save_validation.md
         - title: Migrations
           source: docs/tutorial/migrations.md
+        - title: Sessions
+          source: docs/tutorial/sessions.md
     - title: Batteries
       children:
         - title: Queue
