@@ -67,6 +67,17 @@ else:
 if TYPE_CHECKING:
     from beanie.odm.documents import DocType
 
+if IS_PYDANTIC_V2:
+    plain_validator = (
+        core_schema.with_info_plain_validator_function
+        if hasattr(core_schema, "with_info_plain_validator_function")
+        else core_schema.general_plain_validator_function
+    )
+else:
+
+    def plain_validator(v):
+        return v
+
 
 @dataclass(frozen=True)
 class IndexedAnnotation:
@@ -147,9 +158,7 @@ class PydanticObjectId(ObjectId):
             cls, source_type: Any, handler: GetCoreSchemaHandler
         ) -> CoreSchema:  # type: ignore
             return core_schema.json_or_python_schema(
-                python_schema=core_schema.with_info_plain_validator_function(
-                    cls.validate
-                ),
+                python_schema=plain_validator(cls.validate),
                 json_schema=str_schema(),
                 serialization=core_schema.plain_serializer_function_ser_schema(
                     lambda instance: str(instance)
@@ -397,7 +406,7 @@ class Link(Generic[T]):
             cls, source_type: Any, handler: GetCoreSchemaHandler
         ) -> CoreSchema:  # type: ignore
             return core_schema.json_or_python_schema(
-                python_schema=core_schema.with_info_plain_validator_function(
+                python_schema=plain_validator(
                     cls.build_validation(handler, source_type)
                 ),
                 json_schema=core_schema.typed_dict_schema(
@@ -413,9 +422,6 @@ class Link(Generic[T]):
                 serialization=core_schema.plain_serializer_function_ser_schema(  # type: ignore
                     lambda instance: cls.serialize(instance)  # type: ignore
                 ),
-            )
-            return core_schema.with_info_plain_validator_function(
-                cls.build_validation(handler, source_type)
             )
 
     else:
@@ -474,9 +480,7 @@ class BackLink(Generic[T]):
         def __get_pydantic_core_schema__(
             cls, source_type: Any, handler: GetCoreSchemaHandler
         ) -> CoreSchema:  # type: ignore
-            return core_schema.with_info_plain_validator_function(
-                cls.build_validation(handler, source_type)
-            )
+            return plain_validator(cls.build_validation(handler, source_type))
 
     else:
 
@@ -581,7 +585,7 @@ class IndexModelField:
                 else:
                     return IndexModelField(IndexModel(v))
 
-            return core_schema.with_info_plain_validator_function(validate)
+            return plain_validator(validate)
 
     else:
 

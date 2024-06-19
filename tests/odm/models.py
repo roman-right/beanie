@@ -107,7 +107,12 @@ class Color:
                 return Color(value["value"])
             return Color(value)
 
-        python_schema = core_schema.general_plain_validator_function(validate)
+        vf = (
+            core_schema.with_info_plain_validator_function
+            if hasattr(core_schema, "with_info_plain_validator_function")
+            else core_schema.general_plain_validator_function
+        )
+        python_schema = vf(validate)
 
         return core_schema.json_or_python_schema(
             json_schema=core_schema.str_schema(),

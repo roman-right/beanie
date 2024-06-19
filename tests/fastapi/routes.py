@@ -37,7 +37,10 @@ async def create_house(window: WindowAPI):
 
 @house_router.post("/houses_with_window_link/", response_model=HouseAPI)
 async def create_houses_with_window_link(window: WindowInput):
-    house = HouseAPI.parse_obj(
+    validator = (
+        HouseAPI.model_validate if IS_PYDANTIC_V2 else HouseAPI.parse_obj
+    )
+    house = validator(
         dict(name="test_name", windows=[WindowAPI.link_from_id(window.id)])
     )
     await house.insert(link_rule=WriteRules.WRITE)
