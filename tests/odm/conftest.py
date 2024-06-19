@@ -16,6 +16,7 @@ from tests.odm.models import (
     DocNonRoot,
     DocumentForEncodingTest,
     DocumentForEncodingTestDate,
+    DocumentForEncodingTestTime,
     DocumentMultiModelOne,
     DocumentMultiModelTwo,
     DocumentTestModel,
@@ -291,6 +292,7 @@ async def init(db):
         DocumentWithLinkForNesting,
         DocumentWithBackLinkForNesting,
         LongSelfLink,
+        DocumentForEncodingTestTime,
     ]
     await init_beanie(
         database=db,

@@ -1,10 +1,15 @@
 import re
-from datetime import date, datetime
+from datetime import date, datetime, time
+from datetime import timezone as dt_timezone
+from typing import Union
 from uuid import uuid4
 
 import pytest
 from bson import Binary, Regex
 from pydantic import AnyUrl
+
+# support for older python versions (will cause to test some things twice)
+from pytz import UTC, all_timezones, timezone
 
 from beanie.odm.utils.encoder import Encoder
 from beanie.odm.utils.pydantic import IS_PYDANTIC_V2
@@ -12,6 +17,7 @@ from tests.odm.models import (
     Child,
     DocumentForEncodingTest,
     DocumentForEncodingTestDate,
+    DocumentForEncodingTestTime,
     DocumentWithComplexDictKey,
     DocumentWithDecimalField,
     DocumentWithHttpUrlField,
@@ -20,6 +26,13 @@ from tests.odm.models import (
     ModelWithOptionalField,
     SampleWithMutableObjects,
 )
+
+has_zone_info = True
+try:
+    from zoneinfo import ZoneInfo, available_timezones
+except ImportError:
+    has_zone_info = False
+    ZoneInfo = timezone
 
 
 async def test_encode_datetime():
@@ -169,3 +182,101 @@ async def test_dict_with_complex_key():
 
     assert isinstance(new_doc.dict_field, dict)
     assert new_doc.dict_field.get(uuid) == dt
+
+
+def is_same_type_or_subtype(obj1, obj2):
+    return isinstance(obj1, type(obj2)) or isinstance(obj2, type(obj1))
+
+
+def assert_time_equal(to_test: time, reference: time):
+    if to_test.tzinfo is not None:  # tz
+        if reference.tzinfo.utcoffset(None) is None:
+            now = datetime(
+                1970, 1, 1, 0, 0, 0, 0
+            )  # date dependsent because of daylight saving time
+
+            check_tz_info(to_test, reference, now)
+            # compare without info
+            assert to_test.replace(tzinfo=None) == reference.replace(
+                tzinfo=None
+            )
+        else:
+            check_tz_info(to_test, reference)
+            assert to_test.replace(tzinfo=None) == reference.replace(
+                tzinfo=None
+            )
+    else:
+        assert to_test == reference
+
+
+def check_tz_info(
+    to_test: time, reference: time, when: Union[datetime, None] = None
+):
+    # up to 1-minute (not included) difference is allowed by serialization standard used by pydantic
+    assert (
+        to_test.tzinfo.utcoffset(when).total_seconds() // 60
+        == reference.tzinfo.utcoffset(when).total_seconds() // 60
+    )
+
+
+async def inner_test_time(test_time: time):
+    doc = DocumentForEncodingTestTime(time_field=test_time)
+    await doc.insert()
+    new_doc = await DocumentForEncodingTestTime.get(doc.id)
+    assert_time_equal(new_doc.time_field, doc.time_field)
+    assert isinstance(new_doc.time_field, time)
+    assert_time_equal(new_doc.time_field, test_time)
+
+
+@pytest.mark.parametrize(
+    "test_time",
+    [
+        time(12),
+        time(12, fold=1),
+        time(12, 3),
+        time(12, 3, fold=1),
+        time(12, 4, 5),
+        time(12, 4, 5, fold=1),
+        time(12, 4, 5, 123456),
+        time(12, 4, 5, 123456, fold=1),
+        time(12, 4, 5, 123456, tzinfo=UTC),
+        time(12, 4, 5, 123456, tzinfo=timezone("Europe/Prague")),
+        time(12, 4, 5, 123456, tzinfo=UTC, fold=1),
+        time(12, 4, 5, 123456, tzinfo=timezone("Europe/Prague")),
+        time(12, 4, 5, 123456, tzinfo=timezone("Europe/Prague"), fold=1),
+        time(12, 4, 5, 123456, tzinfo=dt_timezone.utc),
+        time(12, 4, 5, 123456, tzinfo=dt_timezone.utc, fold=1),
+        time(12, 4, 5, 123456, tzinfo=ZoneInfo("Europe/Prague")),
+        time(12, 4, 5, 123456, tzinfo=ZoneInfo("Europe/Prague"), fold=1),
+    ],
+)
+async def test_encode_time_with_tz(test_time: time):
+    await inner_test_time(test_time)
+
+
+if has_zone_info:
+    tz = list(available_timezones())
+    tz.sort()
+
+    @pytest.mark.parametrize("tz_string", tz)
+    async def test_encode_time_exhaustive_timezones_zone_info(tz_string: str):
+        await inner_test_time(
+            time(12, 4, 5, 123456, tzinfo=ZoneInfo(tz_string))
+        )
+
+
+# folowing causes pytz.exceptions.NonExistentTimeError
+pytz_unsupported = (
+    "America/Bahia_Banderas",
+    "America/Hermosillo",
+    "America/Mazatlan",
+    "Mexico/BajaSur",
+)
+
+
+@pytest.mark.parametrize(
+    "tz_string",
+    list(filter(lambda x: x not in pytz_unsupported, all_timezones)),
+)
+async def test_encode_time_exhaustive_timezones_pytz(tz_string: str):
+    await inner_test_time(time(12, 4, 5, 123456, tzinfo=timezone(tz_string)))

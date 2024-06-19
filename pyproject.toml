@@ -46,6 +46,8 @@ test = [
     "pydantic-settings>=2",
     "pydantic-extra-types>=2",
     "pydantic[email]",
+    "pytz",
+    "tzdata"
 ]
 doc = [
     "Pygments>=2.8.0",

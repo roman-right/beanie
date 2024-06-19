@@ -1136,3 +1136,7 @@ class LongSelfLink(Document):
 
     class Settings:
         max_nesting_depth = 50
+
+
+class DocumentForEncodingTestTime(Document):
+    time_field: datetime.time

@@ -26,6 +26,65 @@ import beanie
 from beanie.odm.fields import Link, LinkTypes
 from beanie.odm.utils.pydantic import IS_PYDANTIC_V2, get_model_fields
 
+UNIX_TIME_START = datetime.datetime(1970, 1, 1, 0, 0, 0, 0)
+
+
+def _compatct_time_encoder(time: datetime.time) -> str:
+    # re-implementation of speed date in python
+    # https://github.com/pydantic/speedate/blob/aad1d9117a05618ae883e20ae179c582eb998eeb /src/time.rs#L41 and
+    # pydantic https://github.com/pydantic/pydantic-core/blob/f636403c2e8169bcbb94aa71a0727d76076f7e6e/src/input
+    # /datetime.rs#L177
+    if time.microsecond != 0:
+        time_string = "{:02d}:{:02d}:{:02d}.{:06d}".format(
+            time.hour, time.minute, time.second, time.microsecond
+        )
+    elif time.second != 0:
+        time_string = "{:02d}:{:02d}:{:02d}".format(
+            time.hour, time.minute, time.second
+        )
+    else:
+        time_string = "{:02d}:{:02d}".format(time.hour, time.minute)
+
+    tz_offset = None
+    if time.tzinfo is not None:  # has timezone
+        # check if the offset is fixed no matter the datetime
+        offset_delta = time.tzinfo.utcoffset(None)
+        if (
+            offset_delta is None
+        ):  # is ambiguous resolve base on 1.1.1970 to be consistent across time
+            try:
+                offset_delta = time.tzinfo.utcoffset(UNIX_TIME_START)
+            except Exception as e:
+                raise ValueError from e
+            if offset_delta is not None:  # is not ambiguous
+                tz_offset = round(offset_delta.total_seconds())
+            else:  # even if stuffing time into may work is wrong see
+                raise ValueError(
+                    "timezone is not fixed and cannot be resolved with datetime,"
+                    f"contact the maintainer of {type(time.tzinfo).__name__} for support"
+                )
+        else:  # is known without datetime
+            tz_offset = round(offset_delta.total_seconds())
+
+    if tz_offset is not None:
+        if tz_offset == 0:
+            time_string += "Z"
+        else:
+            is_negative = tz_offset < 0
+            hours = abs(tz_offset // 3600)
+            minutes = abs(tz_offset % 3600) // 60
+
+            # since minutes are negative we need to subtract them from 60 and roll one hour back to be correct
+            if is_negative and minutes != 0:
+                hours -= 1
+                minutes = 60 - minutes
+
+            sign = "-" if is_negative else "+"
+            time_string += "{}{:02d}:{:02d}".format(sign, hours, minutes)
+
+    return time_string
+
+
 SingleArgCallable = Callable[[Any], Any]
 DEFAULT_CUSTOM_ENCODERS: MutableMapping[type, SingleArgCallable] = {
     ipaddress.IPv4Address: str,
@@ -37,8 +96,10 @@ DEFAULT_CUSTOM_ENCODERS: MutableMapping[type, SingleArgCallable] = {
     pathlib.PurePath: str,
     pydantic.SecretBytes: pydantic.SecretBytes.get_secret_value,
     pydantic.SecretStr: pydantic.SecretStr.get_secret_value,
+    # datetimes
     datetime.date: lambda d: datetime.datetime.combine(d, datetime.time.min),
     datetime.timedelta: operator.methodcaller("total_seconds"),
+    datetime.time: _compatct_time_encoder,
     enum.Enum: operator.attrgetter("value"),
     Link: operator.attrgetter("ref"),
     bytes: bson.Binary,
