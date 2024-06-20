@@ -1,6 +1,6 @@
-from typing import List
+from typing import List, Union
 
-from pydantic import BaseModel
+from pydantic import UUID4, BaseModel
 
 from beanie.odm.enums import InspectionStatuses
 from beanie.odm.fields import PydanticObjectId
@@ -11,7 +11,7 @@ class InspectionError(BaseModel):
     Inspection error details
     """
 
-    document_id: PydanticObjectId
+    document_id: Union[PydanticObjectId, UUID4]
     error: str
 
 
