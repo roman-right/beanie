@@ -175,9 +175,15 @@ class Initializer:
         :return: None
         """
         settings_class = getattr(cls, "Settings", None)
-        settings_vars = (
-            {} if settings_class is None else dict(vars(settings_class))
-        )
+        settings_vars = {}
+        if settings_class is not None:
+            # get all attributes of the Settings subclass (including inherited ones)
+            # without magic dunder methods
+            settings_vars = {
+                attr: getattr(settings_class, attr)
+                for attr in dir(settings_class)
+                if not attr.startswith("__")
+            }
         if issubclass(cls, Document):
             cls._document_settings = parse_model(
                 DocumentSettings, settings_vars

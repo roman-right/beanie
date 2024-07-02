@@ -354,3 +354,22 @@ async def test_init_document_with_union_type_expression_optional_back_link(db):
         "back_link_list",
         "back_link",
     }
+
+
+async def test_init_document_can_inhert_and_extend_settings(db):
+    class Sample1(Document):
+        class Settings:
+            name = "sample1"
+            bson_encoders = {Color: lambda x: x.value}
+
+    class Sample2(Sample1):
+        class Settings(Sample1.Settings):
+            name = "sample2"
+
+    await init_beanie(
+        database=db,
+        document_models=[Sample2],
+    )
+
+    assert Sample2.get_settings().bson_encoders != {}
+    assert Sample2.get_settings().name == "sample2"
